@@ -1,0 +1,10 @@
+{
+  "name": "bluejay",
+  "version": "0.1.0",
+  "description": "bluejay project",
+  "author": "PontaIT",
+  "devDependencies": {
+    "grunt-contrib-less": "1.0.0",
+    "grunt-contrib-watch": "0.6.1"
+  }
+}

@@ -1,0 +1,206 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: @mainFontColor;
+}
+
+section {
+  margin: 30px 0;
+}
+.carousel .item {
+  max-height: 800px;
+}
+
+.carousel .item img {
+  width: 100%;
+}
+
+.carousel-indicators li {
+  border: 1px solid @mainColor;
+}
+
+.carousel-indicators .active {
+  background-color: @mainColor;
+}
+
+.slide-content {
+  background-color: @mainColorRGBa;
+  color: @secondaryFontColor;
+  position: absolute;
+  top: 30%;
+  width: 100%;
+}
+
+.slide-content h1 {
+  font-weight: 700;
+  font-size: 74px;
+}
+
+.section-header {
+  border-bottom: 3px solid @mainColor;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.section-header-inverted {
+  color: @secondaryFontColor;
+  border-bottom: 3px solid @secondaryFontColor;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.service {
+  text-align: center;
+}
+.service .fa-stack {
+  font-size: 100px;
+}
+
+.service .fa-stack-2x {
+  color: @mainColor;
+}
+
+.service .fa-stack-1x {
+  color: @secondaryFontColor;
+}
+
+.service .fa-stack-1x {
+  transform:scale(1);
+  transition:all 0.3s ease-out;
+}
+
+.service:hover .fa-stack-1x {
+  transform:scale(1.1);
+  transition:all 0.3s ease-out;
+}
+
+.service p {
+  font-size: 1em;
+}
+
+.quotation {
+  background: linear-gradient(
+		  rgba(0, 0, 0, 0.7),
+		  rgba(0, 0, 0, 0.7)
+  ),  url('../img/photo4.jpg') no-repeat 50% 50%;
+  color: @secondaryFontColor;
+  background-size: 100%;
+  font-size: 30px;
+  text-align: center;
+  padding: 45px 0;
+}
+
+@media (max-width: 699px) {
+  .slide-content h1 {
+	font-size: 1em;
+  }
+  .slide-content h2 {
+	font-size: 1em;
+  }
+
+  .quotation {
+    font-size: 18px;
+	background-size: auto;
+  }
+}
+
+.quotation i {
+  float: left;
+}
+.quotation .fa-quote-left {
+  float: left;
+}
+
+.quotation .fa-quote-right {
+  float: right;
+}
+
+.skill-chart {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.our-works {
+  background: linear-gradient(
+		  rgba(42, 172, 247, 0.8),
+		  rgba(42, 172, 247, 0.8)
+  ),  url('../img/photo6.jpg') no-repeat 50% 50%;
+  color: @secondaryFontColor;
+  background-size: 100%;
+}
+
+.isotope {
+  margin-top: 20px;
+  text-align: center;
+}
+.isotope img {
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 430px) and (max-width: 767px) {
+  .isotope img {
+	width: 50%;
+	height: 50%;
+  }
+}
+
+.project-item {
+  margin-bottom: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.project-over-layer {
+  background: linear-gradient(
+		rgba(255, 255, 255, 0.8),
+		rgba(255, 255, 255, 0.8)
+  );
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1000;
+  top: -100%;
+  transition:all 0.3s ease-out;
+  text-align: center;
+  color: @mainFontColor;
+}
+
+.project-description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.project-description h1 {
+  border-bottom: 2px solid @mainColor;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-bottom: 5px;
+  color: @mainColor;
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+.project-item:hover .project-over-layer {
+  top: 0;
+  transition:all 0.3s ease-out;
+}
+
+#filters {
+  text-align: center;
+}
+
+.our-works .btn {
+  background: transparent;
+  color: @secondaryFontColor;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+.our-works .btn:hover {
+  background: @secondaryFontColor;
+  color: @mainColor;
+}
+
