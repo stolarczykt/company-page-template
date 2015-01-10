@@ -231,10 +231,9 @@
 	</section>
 	<!--End of about and skills-->
 
+	<!--Projects-->
 	<section class="our-works">
 		<div class="container">
-			<br/>
-			<br/>
 			<div class="row">
 				<div class="col-md-offset-2 col-md-8 section-header-inverted">
 					<h1>Our works</h1>
@@ -343,22 +342,53 @@
 				</div>
 			</div>
 		</div>
-		<br/>
-		<br/>
 	</section>
+	<!--End of projects-->
+
+	<!--News-->
+	<section>
+		<div class="container news">
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8 section-header">
+					<h1>News</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8" style="text-align: center;">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper gravida porta.
+						Donec accumsan neque vitae mauris pulvinar lacinia. Praesent. Lorem ipsum dolor sit amet,
+						consectetur adipiscing elit. Vestibulum semper gravida porta. Donec accumsan neque vitae mauris
+						pulvinar lacinia. Praesent. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+						semper gravida porta. Donec accumsan neque vitae mauris pulvinar lacinia. Praesent.
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="news-photo">
+						<img src="resources/img/news_thumb.jpg" alt="" style="width: 100%;"/>
+						<div class="news-plus">
+							<span class="fa-stack">
+								<i class="fa fa-circle fa-stack-2x" style="color: white"></i>
+								<i class="fa fa-plus fa-stack-1x"></i>
+							</span>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--End of news-->
+
 	<script src="resources/vendor/jquery/jquery-min.js"></script>
 	<script src="resources/vendor/bootstrap/js/bootstrap.min.js"></script>
 	<script src="resources/vendor/jquery-plugin-circliful/js/jquery.circliful.min.js"></script>
 	<script src="resources/vendor/isotope/isotope.pkgd.min.js"></script>
 
 	<script>
-		$( document ).ready(function() {
-			$('#myStat1').circliful();
-			$('#myStat2').circliful();
-			$('#myStat3').circliful();
-			$('#myStat4').circliful();
-		});
-		$(window).load(function() {
+		$(function() {
 			var $container = $('.isotope').isotope({
 				itemSelector: '.col-md-6',
 				isFitWidth: true
@@ -370,6 +400,10 @@
 				var filterValue = $(this).attr('data-filter');
 				$container.isotope({ filter: filterValue });
 			});
+			$('#myStat1').circliful();
+			$('#myStat2').circliful();
+			$('#myStat3').circliful();
+			$('#myStat4').circliful();
 		});
 	</script>
 	<script src="//localhost:35729/livereload.js"></script>
