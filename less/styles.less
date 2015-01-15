@@ -209,6 +209,9 @@ section {
 }
 
 .news-plus {
+  padding-top: 10%;
+  font-size: 2.5em;
+  text-align: center;
   width: 100%;
   height: 100%;
   background: @mainColor;
@@ -218,12 +221,42 @@ section {
   transition:all 0.3s ease-out;
 }
 
+.news-plus .fa-plus {
+  color: @mainColor;
+}
+
 .news:hover .news-plus {
   top: 40%;
   transition:all 0.3s ease-out;
 }
 
 .news-text {
+  font-size: 0.9em;
+  padding: 10px;
+  overflow: hidden;
   background: @mainColor;
+  color: @secondaryFontColor;
   min-height: 50px;
+}
+
+.news-text h4 {
+  margin-bottom: 0px;
+  font-weight: bold;
+}
+
+.news-text p {
+  margin: 10px 0;
+}
+
+.news-text .btn {
+  background: @secondaryFontColor;
+  color: @mainColor;
+  font-weight: bold;
+  border-radius: 0px;
+}
+
+.read-more {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
 }
