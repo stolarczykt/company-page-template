@@ -260,3 +260,34 @@ section {
   text-align: center;
   margin-top: 20px;
 }
+
+.team-section {
+  background: @teamBackground;
+}
+
+.team-member h4 {
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 1px solid @mainColor;
+}
+
+.team-member p {
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.team-member img {
+  margin: 0 auto;
+}
+
+.team-member:hover img {
+  opacity: 0.5;
+  transition: all 0.3s ease-out;
+}
+
+.team-member:hover h4 {
+  background: @mainColor;
+  color: @secondaryFontColor;
+  transition: all 0.3s ease-out;
+}
