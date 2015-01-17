@@ -250,7 +250,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="isotope">
+				<div id="isotope">
 					<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 illustration">
 						<div class="project-item">
 							<div class="project-over-layer">
@@ -469,7 +469,7 @@
 					<h4>John Doe</h4>
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper gravida porta.
-						Donec accumsan neque vitae mauris pulvinar lacinia. Praesent.
+						Donec accumsan neque vitae mauris pulvinasr lacinia. cPraesent.
 					</p>
 				</div>
 			</div>
@@ -481,20 +481,23 @@
 	<script src="resources/vendor/bootstrap/js/bootstrap.min.js"></script>
 	<script src="resources/vendor/jquery-plugin-circliful/js/jquery.circliful.min.js"></script>
 	<script src="resources/vendor/isotope/isotope.pkgd.min.js"></script>
+	<script src="resources/vendor/imagesloaded.pkgd.min.js"></script>
 
 	<script>
 		$(function() {
-			var $container = $('.isotope').isotope({
-				itemSelector: '.col-md-6',
-				isFitWidth: true
+			var $container = $('#isotope').imagesLoaded( function() {
+				$container.isotope({
+					itemSelector: '.col-md-6',
+					isFitWidth: true
+				});
+				$container.isotope({ filter: '*' });
+				$('#filters').on( 'click', 'a', function() {
+					var filterValue = $(this).attr('data-filter');
+					$container.isotope({ filter: filterValue });
+				});
 			});
 
-			$container.isotope({ filter: '*' });
 
-			$('#filters').on( 'click', 'a', function() {
-				var filterValue = $(this).attr('data-filter');
-				$container.isotope({ filter: filterValue });
-			});
 			$('#myStat1').circliful();
 			$('#myStat2').circliful();
 			$('#myStat3').circliful();
