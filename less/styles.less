@@ -39,7 +39,7 @@ section {
   border-bottom: 3px solid @mainColor;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
 }
 
 .section-header-inverted {
@@ -292,4 +292,49 @@ section {
   background: @mainColor;
   color: @secondaryFontColor;
   transition: all 0.3s ease-out;
+}
+
+.contact {
+  background: linear-gradient(
+		  rgba(255, 255, 255, 0.8),
+		  rgba(255, 255, 255, 0.8)
+  ),  url('../img/photo5.jpg') no-repeat 50% 50%;
+  border-top: 5px solid @mainColor;
+  border-bottom: 5px solid @mainColor;
+  background-size: 100%;
+}
+
+.contact-info {
+  font-size: 1.2em;
+}
+
+.contact-info .fa {
+  color: @mainColor;
+}
+
+.phone-number {
+  font-size: 2em;
+}
+
+.address-info {
+  margin-bottom: 40px;
+}
+
+.contact .form-control {
+  border-radius: 0;
+}
+
+.contact button {
+  font-size: 1.5em;
+  background: @mainColor;
+  color: @secondaryFontColor;
+  padding: 10px 40px;
+  border-radius: 0;
+  text-transform: uppercase;
+}
+
+.contact button:hover {
+  background: @secondaryFontColor;
+  color: @mainColor;
+  border: 1px solid @mainColor;
 }
