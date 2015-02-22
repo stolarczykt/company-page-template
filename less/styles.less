@@ -124,8 +124,8 @@ section {
 
 .our-works {
   background: linear-gradient(
-		  rgba(42, 172, 247, 0.8),
-		  rgba(42, 172, 247, 0.8)
+		  @ourWorksRGBa,
+          @ourWorksRGBa
   ),  url('../img/photo6.jpg') no-repeat 50% 50%;
   color: @secondaryFontColor;
   background-size: 100%;
@@ -362,6 +362,7 @@ footer i:hover {
 }
 
 .navbar {
+  font-size: 1.2em;
   padding: 20px 0;
   -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
   -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
