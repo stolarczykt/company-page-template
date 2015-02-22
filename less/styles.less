@@ -367,6 +367,34 @@ footer i:hover {
   -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
   transition: background .5s ease-in-out,padding .5s ease-in-out;
 }
-.top-nav-collapse {
+.navbar-default.top-nav-collapse {
   padding: 0;
+  border-color: @mainColor;
+  background: @mainColor none;
+  box-shadow: none;
+}
+.navbar-default.top-nav-collapse .navbar-nav>li>a {
+  color: @secondaryFontColor;
+}
+.navbar-default.top-nav-collapse .navbar-brand, .navbar-default.top-nav-collapse .navbar-brand:focus {
+  color: @secondaryFontColor;
+}
+.navbar-default {
+  border-color: transparent;
+  background: @secondaryFontColor none;
+  box-shadow: none;
+}
+.navbar-default .navbar-nav>li>a {
+  color: @mainColor;
+}
+.navbar-default .navbar-brand, .navbar-default .navbar-brand:focus {
+  color: @mainColor;
+}
+.navbar-default .navbar-nav>li.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+  background: @secondaryFontColor;
+  box-shadow: none;
+  color: @mainColor;
+  -webkit-transition: background .5s ease-in-out;
+  -moz-transition: background .5s ease-in-out;
+  transition: background .5s ease-in-out;
 }
