@@ -23,7 +23,8 @@ module.exports = function(grunt) {
 				tasks: ['less:development']
 			},
 			js: {
-				files: ['resources/js/*.js']
+				files: ['resources/js/*.js'],
+				files: ['resources/vendor/*.js']
 			},
 			html: {
 				files: ['*.html']
