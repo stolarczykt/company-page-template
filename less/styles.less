@@ -7,6 +7,10 @@ body {
 section {
   padding: 30px 0;
 }
+
+i {
+  color: @mainColor;
+}
 .carousel .item {
   max-height: 800px;
 }
@@ -253,7 +257,7 @@ section {
   background: @secondaryFontColor;
   color: @mainColor;
   font-weight: bold;
-  border-radius: 0px;
+  border-radius: 0;
 }
 
 .read-more {
@@ -321,23 +325,25 @@ section {
   margin-bottom: 40px;
 }
 
-.contact .form-control {
+.form-control {
   border-radius: 0;
 }
 
-.contact button {
+.btn {
   font-size: 1.5em;
   background: @mainColor;
   color: @secondaryFontColor;
   padding: 10px 40px;
   border-radius: 0;
   text-transform: uppercase;
+  transition:all 0.5s ease-out;
 }
 
-.contact button:hover {
+.btn:hover {
   background: @secondaryFontColor;
   color: @mainColor;
   border: 1px solid @mainColor;
+  transition:all 0.5s ease-out;
 }
 
 #map-container {
@@ -449,9 +455,13 @@ footer i:hover {
 .newsletter h1 {
   text-align: center;
 }
-.newsletter i {
-  color: @mainColor;
+
+.newsletter input {
+  width: 30%;
+  margin: auto;
+  height: 50px;
 }
+
 .social {
   display: table;
   float: left;
@@ -478,4 +488,45 @@ footer i:hover {
   height: 2px;
   background-color:#b9b9b9;
   border: 0 none;
+}
+
+.comments h1 {
+  margin-bottom: 0;
+}
+
+.comment {
+  padding: 0;
+}
+
+.comment h2 {
+  color: #3a3a3a;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.comment .date {
+  color: #3a3a3a;
+  font-weight: bold;
+}
+.comment p {
+  margin: 10px 0;
+  padding-left: 40px;
+  font-size: 1em;
+}
+
+.post-reply {
+  padding: 0;
+}
+
+.post-reply h1 {
+  margin: 10px 0;
+}
+
+.post-reply input {
+  width: 40%;
+  height: 50px;
+}
+
+.post-reply button {
+  float: right;
 }

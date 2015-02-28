@@ -115,30 +115,40 @@
 					</div>
 				</div>
 
-				<h1 style="margin-top: 20px; margin-bottom: 0;">Comments (4) <i class="fa fa-2x fa-comments-o"></i></h1>
-				<hr/>
-				<h1 style="font-weight: bold;">John Doe</h1>
-				<strong>May 23, 2012 at 8:00 pm / <a href="#">Reply</a></strong>
-				<p style="padding-left: 40px; font-size: 1em;">
-					Mauris et dui at orci cursus dignissim non quis dui. Quisque interdum lorem ut nibh tincidunt
-					interdum. Sed velit orci, lobortis et vestibulum eu, vestibulum quis enim. Proin lobortis
-					mollis rutrum. Donec non nisl congue, sollicitudin nisl in, feugiat dui.
-				</p>
-				<hr/>
-				<h1 style="margin-top: 20px; margin-bottom: 0;">Leave a reply</h1>
-				<form>
-					<div class="form-group">
-						<input type="text" class="form-control" placeholder="Name" style="width: 40%;">
-					</div>
-					<div class="form-group">
-						<input type="email" class="form-control" placeholder="Mail" style="width: 40%;">
-					</div>
-					<div class="form-group">
-						<textarea class="form-control" rows="3" placeholder="Message"></textarea>
-					</div>
+				<section id="comments" class="comments">
+					<div class="row">
+						<div class="col-md-12">
+							<h1>Comments (4) <i class="fa fa-2x fa-comments-o"></i></h1>
+							<hr/>
+							<section class="comment">
+								<h2>John Doe</h2>
+								<span class="date">May 23, 2012 at 8:00 pm / <a href="#">Reply</a></span>
+								<p>
+									Mauris et dui at orci cursus dignissim non quis dui. Quisque interdum lorem ut nibh tincidunt
+									interdum. Sed velit orci, lobortis et vestibulum eu, vestibulum quis enim. Proin lobortis
+									mollis rutrum. Donec non nisl congue, sollicitudin nisl in, feugiat dui.
+								</p>
+							</section>
+							<hr/>
+							<section class="post-reply">
+								<h1>Leave a reply</h1>
+								<form>
+									<div class="form-group">
+										<input type="text" class="form-control" placeholder="Name">
+									</div>
+									<div class="form-group">
+										<input type="email" class="form-control" placeholder="Mail">
+									</div>
+									<div class="form-group">
+										<textarea class="form-control" rows="3" placeholder="Message"></textarea>
+									</div>
 
-					<button type="submit" class="btn btn-default">Submit</button>
-				</form>
+									<button type="submit" class="btn btn-default">Submit</button>
+								</form>
+							</section>
+						</div>
+					</div>
+				</section>
 			</div>
 		</div>
 		<div class="row newsletter">
@@ -146,7 +156,7 @@
 
 			<form style="text-align: center;">
 				<div class="form-group">
-					<input type="email" class="form-control" placeholder="Mail" style="width: 30%; margin: auto;">
+					<input type="email" class="form-control" placeholder="Mail">
 				</div>
 				<button type="submit" class="btn btn-default">Submit</button>
 			</form>
