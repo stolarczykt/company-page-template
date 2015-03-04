@@ -654,6 +654,7 @@
 	<script src="resources/vendor/imagesloaded.pkgd.min.js"></script>
 	<script src="resources/vendor/jquery.easing.min.js"></script>
 	<script src="resources/vendor/scrolling-nav.js"></script>
+	<script src="resources/vendor/jquery-cookie-pluigin.js"></script>
 
 	<script>
 		$(function() {
@@ -702,6 +703,29 @@
 
 		google.maps.event.addDomListener(window, 'load', init_map);
 
+		if($.cookie('theme') !== undefined) {
+			var stylesheet = $.cookie('theme');
+
+			$('link#theme').attr('href', 'resources/css/' + stylesheet);
+
+			$('link#theme').load(function(){
+				$('link#main').attr('href', 'resources/css/' + stylesheet);
+			});
+
+			$.cookie('theme', stylesheet);
+
+			setTimeout( function() {
+				var el=document.getElementById('footer');
+				var cs=document.defaultView.getComputedStyle(el,null);
+				var bg=cs.getPropertyValue('background-color');
+
+				$('#myStat1').html("").data("fgcolor", bg).circliful();
+				$('#myStat2').html("").data("fgcolor", bg).circliful();
+				$('#myStat3').html("").data("fgcolor", bg).circliful();
+				$('#myStat4').html("").data("fgcolor", bg).circliful();
+			}, 500);
+		}
+
 		$('#themes li').click(function(e){
 			e.preventDefault();
 
@@ -712,6 +736,8 @@
 			$('link#theme').load(function(){
 				$('link#main').attr('href', 'resources/css/' + stylesheet);
 			});
+
+			$.cookie('theme', stylesheet);
 
 			setTimeout( function() {
 				var el=document.getElementById('footer');
