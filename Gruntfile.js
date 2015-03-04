@@ -9,7 +9,13 @@ module.exports = function(grunt) {
 				},
 				files: {
 					"resources/css/default.css": "less/colors/default.less",
-					"resources/css/yellow-and-black.css": "less/colors/yellow-and-black.less"
+					"resources/css/yellow-and-black.css": "less/colors/yellow-and-black.less",
+					"resources/css/aqua-and-dark-blue.css": "less/colors/aqua-and-dark-blue.less",
+					"resources/css/aqua-and-black.css": "less/colors/aqua-and-black.less",
+					"resources/css/green-and-dark-blue.css": "less/colors/green-and-dark-blue.less",
+					"resources/css/pink-and-grey.css": "less/colors/pink-and-grey.less",
+					"resources/css/brown-and-beige.css": "less/colors/brown-and-beige.less",
+					"resources/css/grey-and-cobalt.css": "less/colors/grey-and-cobalt.less"
 
 				}
 			}
