@@ -47,6 +47,10 @@ i {
   margin-bottom: 40px;
 }
 
+.section-header h1, .section-header-inverted h1 {
+  font-size: 55px;
+}
+
 .section-header-inverted {
   color: @secondaryFontColor;
   border-bottom: 3px solid @secondaryFontColor;
@@ -208,6 +212,15 @@ i {
   color: @mainColor;
 }
 
+.our-works input {
+  display: none;
+}
+
+.our-works input:checked + .btn {
+  background: @secondaryFontColor;
+  color: @mainColor;
+}
+
 .news-photo {
   position: relative;
   overflow: hidden;
@@ -262,6 +275,13 @@ i {
   color: @mainColor;
   font-weight: bold;
   border-radius: 0;
+  transition:all 0.5s ease-out;
+}
+
+.news-text .btn:hover {
+  background: linear-gradient(@mainColorRGBa, @mainColorRGBa) @secondaryFontColor;
+  color: @mainColor;
+  transition:all 0.5s ease-out;
 }
 
 .read-more {
@@ -333,7 +353,7 @@ i {
   border-radius: 0;
 }
 
-.btn {
+.btn-default {
   font-size: 1.5em;
   background: @mainColor;
   color: @secondaryFontColor;
@@ -343,7 +363,7 @@ i {
   transition:all 0.5s ease-out;
 }
 
-.btn:hover {
+.btn-default:hover {
   background: @secondaryFontColor;
   color: @mainColor;
   border: 1px solid @mainColor;

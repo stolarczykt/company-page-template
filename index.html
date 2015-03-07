@@ -315,10 +315,17 @@
 			<div class="row">
 				<div class="col-md-12" >
 					<div id="filters" class="button-group">
-						<a class="btn" data-filter="*">show all</a>
-						<a class="btn" data-filter=".illustration">illustration</a>
-						<a class="btn" data-filter=".identity">identity</a>
-						<a class="btn" data-filter=".logo">logo</a>
+						<input type="radio" id="works-all" name="filter" checked />
+						<label for="works-all" class="btn" data-filter="*">show all</label>
+
+						<input type="radio" id="works-illustrations" name="filter" />
+						<label for="works-illustrations" class="btn" data-filter=".illustration">illustration</label>
+
+						<input type="radio" id="works-identity" name="filter"/>
+						<label for="works-identity" class="btn" data-filter=".identity">identity</label>
+
+						<input type="radio" id="works-logo" name="filter" />
+						<label for="works-logo" class="btn" data-filter=".logo">logo</label>
 					</div>
 				</div>
 			</div>
@@ -664,7 +671,7 @@
 					isFitWidth: true
 				});
 				$container.isotope({ filter: '*' });
-				$('#filters').on( 'click', 'a', function() {
+				$('#filters').on( 'click', 'label', function() {
 					var filterValue = $(this).attr('data-filter');
 					$container.isotope({ filter: filterValue });
 				});
