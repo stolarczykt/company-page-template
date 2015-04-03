@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<title>Bluejay</title>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="resources/vendor/bootstrap/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="resources/vendor/bootstrap/css/bootstrap.css"/>
 	<link rel="stylesheet" href="resources/vendor/bootstrap/css/bootstrap-theme.min.css"/>
 	<link rel="stylesheet" href="resources/vendor/font-awesome/css/font-awesome.min.css"/>
 	<link rel="stylesheet" href="resources/vendor/jquery-plugin-circliful/css/jquery.circliful.css" />
@@ -21,6 +21,7 @@
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="80">
 	<header>
+		<!-- Navigation bar -->
 		<div class="container">
 			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 				<div class="container">
@@ -33,9 +34,6 @@
 					</div>
 					<div class="navbar-collapse collapse navbar-right" id="bs-navbar-collapse">
 						<ul class="nav navbar-nav">
-							<li class="visible-xs">
-								<a class="page-scroll" href="#slider">Home</a>
-							</li>
 							<li>
 								<a class="page-scroll" href="#services">Services</a>
 							</li>
@@ -122,56 +120,56 @@
 				</div>
 			</nav>
 		</div>
-			<!--karuzelka tutaj-->
-			<div id="slider" class="carousel slide" data-ride="carousel" data-interval="3000" data-pause="false">
-				<!-- Indicators -->
-				<ol class="carousel-indicators">
-					<li data-target="#slider" data-slide-to="0" class="active"></li>
-					<li data-target="#slider" data-slide-to="1"></li>
-					<li data-target="#slider" data-slide-to="2"></li>
-				</ol>
+		<!-- End of navigation bar -->
+		<!--Carousel-->
+		<div id="slider" class="carousel slide" data-ride="carousel" data-interval="3000" data-pause="false">
 
-				<!-- Wrapper for slides -->
-				<div class="carousel-inner" role="listbox">
-					<div class="item active" id="slide1">
-						<div class="slide-content">
-							<div class="container">
-								<div class="row">
-									<div class="col-md-12 col-xs-12">
-										<h1>I am designer!</h1>
-										<h2>This is a place for You</h2>
-									</div>
+			<ol class="carousel-indicators">
+				<li data-target="#slider" data-slide-to="0" class="active"></li>
+				<li data-target="#slider" data-slide-to="1"></li>
+				<li data-target="#slider" data-slide-to="2"></li>
+			</ol>
+
+			<div class="carousel-inner" role="listbox">
+				<div class="item active" id="slide1">
+					<div class="slide-content">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12 col-xs-12">
+									<h1>I am designer!</h1>
+									<h2>This is a place for You</h2>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="item" id="slide2">
-						<div class="slide-content">
-							<div class="container">
-								<div class="row">
-									<div class="col-md-12 col-xs-12">
-                                        <h1>I am designer!</h1>
-                                        <h2>This is a place for You</h2>
-									</div>
+				</div>
+				<div class="item" id="slide2">
+					<div class="slide-content">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12 col-xs-12">
+									<h1>I am designer!</h1>
+									<h2>This is a place for You</h2>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="item" id="slide3">
-						<div class="slide-content">
-							<div class="container">
-								<div class="row">
-									<div class="col-md-12 col-xs-12">
-                                        <h1>I am designer!</h1>
-                                        <h2>This is a place for You</h2>
-									</div>
+				</div>
+				<div class="item" id="slide3">
+					<div class="slide-content">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12 col-xs-12">
+									<h1>I am designer!</h1>
+									<h2>This is a place for You</h2>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!--koniec karuzelki-->
+		</div>
+		<!-- End of carousel -->
 	</header>
 
 	<!--Services-->
