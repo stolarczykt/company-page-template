@@ -112,7 +112,7 @@ i {
   background: linear-gradient(
 		  rgba(0, 0, 0, 0.7),
 		  rgba(0, 0, 0, 0.7)
-  ),  url('../img/photo4.jpg') no-repeat center center fixed;
+  ),  url('../img/quotation-bg.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -180,7 +180,7 @@ i {
   background: linear-gradient(
 		  @ourWorksRGBa,
           @ourWorksRGBa
-  ),  url('../img/photo6.jpg') no-repeat center center fixed;
+  ),  url('../img/our-works-bg.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -269,6 +269,7 @@ i {
 }
 
 #news p {
+  text-align: center;
   margin-bottom: 50px;
 }
 
@@ -277,7 +278,7 @@ i {
   overflow: hidden;
 }
 
-.news-plus {
+.news-img-overlayer {
   padding-top: 10%;
   font-size: 2.5em;
   text-align: center;
@@ -290,15 +291,19 @@ i {
   transition:all 0.3s ease-out;
 }
 
-.news-plus .fa-plus {
+.news-img-overlayer .fa-stack-1x {
   color: @mainColor;
 }
 
-.news-plus .fa-stack-2x {
+.news-img-overlayer .fa-stack-2x {
   color: @secondaryFontColor;
 }
 
-.news:hover .news-plus {
+.news-item {
+  margin-bottom: 15px;
+}
+
+.news-item:hover .news-img-overlayer {
   top: 40%;
   transition:all 0.3s ease-out;
 }
@@ -317,7 +322,8 @@ i {
   font-weight: bold;
 }
 
-.news-text p {
+#news .news-text p {
+  text-align: left;
   margin: 10px 0;
 }
 
@@ -378,7 +384,7 @@ i {
   background: linear-gradient(
 		  rgba(255, 255, 255, 0.8),
 		  rgba(255, 255, 255, 0.8)
-  ),  url('../img/photo5.jpg') no-repeat center center fixed;
+  ),  url('../img/contact-bg.jpg') no-repeat center center fixed;
   border-top: 5px solid @mainColor;
   border-bottom: 5px solid @mainColor;
   -webkit-background-size: cover;
@@ -408,6 +414,7 @@ i {
 }
 
 .btn-default {
+  text-shadow: 0 0 0;
   font-size: 1.5em;
   background: @mainColor;
   color: @secondaryFontColor;
@@ -418,6 +425,7 @@ i {
 }
 
 .btn-default:hover {
+  text-shadow: 0 0 0;
   background: @secondaryFontColor;
   color: @mainColor;
   border: 1px solid @mainColor;
@@ -610,4 +618,8 @@ footer i:hover {
 
 .post-reply button {
   float: right;
+}
+
+#google-map {
+  padding: 0;
 }

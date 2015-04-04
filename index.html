@@ -422,7 +422,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-offset-2 col-md-8" style="text-align: center;">
+				<div class="col-md-offset-2 col-md-8">
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper gravida porta.
 						Donec accumsan neque vitae mauris pulvinar lacinia. Praesent. Lorem ipsum dolor sit amet,
@@ -432,13 +432,13 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-4 news">
+				<div class="col-md-4 news-item">
 					<div class="news-photo">
-						<img src="resources/img/news_thumb.jpg" alt="" style="width: 100%;"/>
-						<div class="news-plus">
+						<img class="img-responsive" src="resources/img/blog/post1.jpg" alt="Post image"/>
+						<div class="news-img-overlayer">
 							<span class="fa-stack">
 								<i class="fa fa-circle fa-stack-2x"></i>
-								<i class="fa fa-plus fa-stack-1x"></i>
+								<a href="post.html"><i class="fa fa-external-link-square fa-stack-1x"></i></a>
 							</span>
 						</div>
 					</div>
@@ -455,13 +455,13 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 news">
+				<div class="col-md-4 news-item">
 					<div class="news-photo">
-						<img src="resources/img/news_thumb.jpg" alt="" style="width: 100%;"/>
-						<div class="news-plus">
+						<img class="img-responsive" src="resources/img/blog/post2.jpg" alt=""/>
+						<div class="news-img-overlayer">
 							<span class="fa-stack">
 								<i class="fa fa-circle fa-stack-2x"></i>
-								<i class="fa fa-plus fa-stack-1x"></i>
+								<a href="post.html"><i class="fa fa-external-link-square fa-stack-1x"></i></a>
 							</span>
 						</div>
 					</div>
@@ -478,13 +478,13 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 news">
+				<div class="col-md-4 news-item">
 					<div class="news-photo">
-						<img src="resources/img/news_thumb.jpg" alt="" style="width: 100%;"/>
-						<div class="news-plus">
+						<img class="img-responsive" src="resources/img/blog/post3.jpg" alt=""/>
+						<div class="news-img-overlayer">
 							<span class="fa-stack">
 								<i class="fa fa-circle fa-stack-2x"></i>
-								<i class="fa fa-plus fa-stack-1x"></i>
+								<a href="post.html"><i class="fa fa-external-link-square fa-stack-1x"></i></a>
 							</span>
 						</div>
 					</div>
@@ -555,72 +555,77 @@
 			<div class="row address-info">
 				<div class="col-sm-6">
 					<div class="contact-info">
-						<div class="col-sm-4">
+						<div class="col-sm-4 col-xs-4">
 							<i class="fa fa-home fa-4x pull-right"></i>
 						</div>
-						<address class="col-sm-8">
-							<strong>Himalaya Company</strong><br/>
-							77 Mass. Ave., E14/E15 <br/>
-							Cambridge, MA 02139-4307 USA
+						<address class="col-sm-8 col-xs-8">
+							<strong>Abcdefgh Company</strong><br/>
+							12 Abcc. Ave., A12/B34 <br/>
+							Xyzabcdef, AB 01234-5678 USA
 						</address>
 					</div>
 				</div>
 				<div class="col-sm-6">
 					<div class="contact-info">
-						<div class="col-sm-2">
+						<div class="col-sm-4 col-xs-4">
 							<i class="fa fa-phone fa-4x pull-right"></i>
 						</div>
-						<div class="col-sm-10 phone-number">
-							555 555 555
+						<div class="col-sm-8 col-xs-8 phone-number">
+							(012) 345-6789
 						</div>
 					</div>
 				</div>
 			</div>
-			<form class="form-horizontal">
-				<div class="row">
-					<div class="col-sm-offset-1 col-sm-4">
-						<div class="form-group">
-							<label for="input-name" class="col-sm-3 control-label">Name:</label>
-							<div class="col-sm-9">
-								<input type="text" class="form-control" id="input-name">
+			<div class="row">
+				<div class="col-md-12">
+
+					<form class="form-horizontal">
+						<div class="row">
+							<div class="col-sm-offset-1 col-sm-4">
+								<div class="form-group">
+									<label for="input-name" class="col-sm-3 control-label">Name:</label>
+									<div class="col-sm-9">
+										<input type="text" class="form-control" id="input-name">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="input-email" class="col-sm-3 control-label">Email:</label>
+									<div class="col-sm-9">
+										<input type="email" class="form-control" id="input-email">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="input-phone" class="col-sm-3 control-label">Phone:</label>
+									<div class="col-sm-9">
+										<input type="text" class="form-control" id="input-phone">
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="form-group">
+									<label for="textarea-message" class="col-sm-3 control-label">Message:</label>
+									<div class="col-sm-9">
+										<textarea class="form-control" rows="6" id="textarea-message"></textarea>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="form-group">
-							<label for="input-email" class="col-sm-3 control-label">Email:</label>
-							<div class="col-sm-9">
-								<input type="email" class="form-control" id="input-email">
+						<div class="row">
+							<div class="form-group">
+								<div class="col-sm-12">
+									<button type="submit" class="btn btn-default center-block">Submit</button>
+								</div>
 							</div>
 						</div>
-						<div class="form-group">
-							<label for="input-phone" class="col-sm-3 control-label">Phone:</label>
-							<div class="col-sm-9">
-								<input type="text" class="form-control" id="input-phone">
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-6">
-						<div class="form-group">
-							<label for="textarea-message" class="col-sm-3 control-label">Message:</label>
-							<div class="col-sm-9">
-								<textarea class="form-control" rows="6" id="textarea-message"></textarea>
-							</div>
-						</div>
-					</div>
+					</form>
 				</div>
-				<div class="row">
-					<div class="form-group">
-						<div class="col-sm-12">
-							<button type="submit" class="btn btn-default center-block">Submit</button>
-						</div>
-					</div>
-				</div>
-			</form>
+			</div>
 		</div>
 	</section>
 	<!--End of contact-->
 
 	<!--Map-->
-	<section style="padding: 0;">
+	<section id="google-map">
 		<div id="map-container">
 		</div>
 	</section>
@@ -631,10 +636,10 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<a href=""><i class="fa fa-google-plus-square fa-3x"></i></a>
-					<a href=""><i class="fa fa-share-alt-square fa-3x"></i></a>
-					<a href=""><i class="fa fa-linkedin-square fa-3x"></i></a>
-					<a href=""><i class="fa fa-facebook-square fa-3x"></i></a>
+					<a href="#footer"><i class="fa fa-google-plus-square fa-3x"></i></a>
+					<a href="#footer"><i class="fa fa-share-alt-square fa-3x"></i></a>
+					<a href="#footer"><i class="fa fa-linkedin-square fa-3x"></i></a>
+					<a href="#footer"><i class="fa fa-facebook-square fa-3x"></i></a>
 				</div>
 			</div>
 		</div>
