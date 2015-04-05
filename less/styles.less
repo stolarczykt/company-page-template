@@ -629,3 +629,23 @@ footer i:hover {
 #google-map {
   padding: 0;
 }
+
+.pagination {
+  margin: 0;
+}
+
+.pagination>li>a, .pagination>li>span {
+  font-size: 1.5em;
+  border: 0;
+  color: @mainFontColor;
+}
+.pagination>li>a:hover, .pagination>li>span:hover, .pagination>li>a:focus, .pagination>li>span:focus {
+  color: @mainColor;
+}
+
+.pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover,
+.pagination>.active>a:focus, .pagination>.active>span:focus {
+  color: @secondaryFontColor;
+  background-color: @mainColor;
+  border-color: @mainColor;
+}
