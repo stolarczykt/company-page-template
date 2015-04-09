@@ -276,16 +276,60 @@
 			</div>
 			<div class="row">
 				<div class="col-md-3">
-					<div id="myStat1" class="skill-chart" data-text="72%" data-percent="72" data-icon="fa-css3" data-info="CSS" data-width="30" data-fontsize="38" data-bgcolor="#eee" data-border="inline" data-icon-size="28" data-icon-color="#ccc" data-dimension="200"></div>
+					<div id="skillNo1"
+						 class="skill-chart"
+						 data-text="72%"
+						 data-percent="72"
+						 data-icon="fa-css3"
+						 data-info="CSS"
+						 data-width="30"
+						 data-fontsize="38"
+						 data-bgcolor="#eee"
+						 data-border="inline"
+						 data-iconsize="24"
+						 data-dimension="200"></div>
 				</div>
 				<div class="col-md-3">
-					<div id="myStat2" class="skill-chart" data-text="90%" data-percent="90" data-icon="fa-html5" data-info="HTML" data-width="30" data-fontsize="38" data-bgcolor="#eee" data-border="inline" data-icon-size="28" data-icon-color="#ccc" data-dimension="200"></div>
+					<div id="skillNo2"
+						 class="skill-chart"
+						 data-text="90%"
+						 data-percent="90"
+						 data-icon="fa-html5"
+						 data-info="HTML"
+						 data-width="30"
+						 data-fontsize="38"
+						 data-bgcolor="#eee"
+						 data-border="inline"
+						 data-iconsize="24"
+						 data-dimension="200"></div>
 				</div>
 				<div class="col-md-3">
-					<div id="myStat3" class="skill-chart" data-text="71%" data-percent="71" data-icon="fa-keyboard-o" data-info="Java" data-width="30" data-fontsize="38" data-bgcolor="#eee" data-border="inline" data-icon-size="28" data-icon-color="#ccc" data-dimension="200"></div>
+					<div id="skillNo3"
+						 class="skill-chart"
+						 data-text="71%"
+						 data-percent="71"
+						 data-icon="fa-keyboard-o"
+						 data-info="Java"
+						 data-width="30"
+						 data-fontsize="38"
+						 data-bgcolor="#eee"
+						 data-border="inline"
+						 data-iconsize="24"
+						 data-dimension="200"></div>
 				</div>
 				<div class="col-md-3">
-					<div id="myStat4" class="skill-chart" data-text="25%" data-percent="25" data-icon="fa-keyboard-o" data-info="PHP" data-width="30" data-fontsize="38" data-bgcolor="#eee" data-border="inline" data-icon-size="28" data-icon-color="#ccc" data-dimension="200"></div>
+					<div id="skillNo4"
+						 class="skill-chart"
+						 data-text="25%"
+						 data-percent="25"
+						 data-icon="fa-keyboard-o"
+						 data-info="PHP"
+						 data-width="30"
+						 data-fontsize="38"
+						 data-bgcolor="#eee"
+						 data-border="inline"
+						 data-iconsize="24"
+						 data-dimension="200"></div>
 				</div>
 			</div>
 		</div>
@@ -687,10 +731,10 @@
 			var cs=document.defaultView.getComputedStyle(e,null);
 			var bg=cs.getPropertyValue('background-color');
 
-			$('#myStat1').data("fgcolor", bg).circliful();
-			$('#myStat2').data("fgcolor", bg).circliful();
-			$('#myStat3').data("fgcolor", bg).circliful();
-			$('#myStat4').data("fgcolor", bg).circliful();
+			$('#skillNo1').data("fgcolor", bg).data("iconcolor", bg).circliful();
+			$('#skillNo2').data("fgcolor", bg).data("iconcolor", bg).circliful();
+			$('#skillNo3').data("fgcolor", bg).data("iconcolor", bg).circliful();
+			$('#skillNo4').data("fgcolor", bg).data("iconcolor", bg).circliful();
 		});
 		function init_map() {
 			var var_location = new google.maps.LatLng(45.430817,12.331516);
@@ -731,10 +775,10 @@
 				var cs=document.defaultView.getComputedStyle(el,null);
 				var bg=cs.getPropertyValue('background-color');
 
-				$('#myStat1').html("").data("fgcolor", bg).circliful();
-				$('#myStat2').html("").data("fgcolor", bg).circliful();
-				$('#myStat3').html("").data("fgcolor", bg).circliful();
-				$('#myStat4').html("").data("fgcolor", bg).circliful();
+				$('#skillNo1').html("").data("fgcolor", bg).data("iconcolor", bg).circliful();
+				$('#skillNo2').html("").data("fgcolor", bg).data("iconcolor", bg).circliful();
+				$('#skillNo3').html("").data("fgcolor", bg).data("iconcolor", bg).circliful();
+				$('#skillNo4').html("").data("fgcolor", bg).data("iconcolor", bg).circliful();
 			}, 500);
 		}
 
@@ -756,10 +800,10 @@
 				var cs=document.defaultView.getComputedStyle(el,null);
 				var bg=cs.getPropertyValue('background-color');
 
-				$('#myStat1').html("").data("fgcolor", bg).circliful();
-				$('#myStat2').html("").data("fgcolor", bg).circliful();
-				$('#myStat3').html("").data("fgcolor", bg).circliful();
-				$('#myStat4').html("").data("fgcolor", bg).circliful();
+				$('#skillNo1').html("").data("fgcolor", bg).data("iconcolor", bg).circliful();
+				$('#skillNo2').html("").data("fgcolor", bg).data("iconcolor", bg).circliful();
+				$('#skillNo3').html("").data("fgcolor", bg).data("iconcolor", bg).circliful();
+				$('#skillNo4').html("").data("fgcolor", bg).data("iconcolor", bg).circliful();
 			}, 500);
 		});
 	</script>
