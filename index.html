@@ -631,25 +631,28 @@
 			<div class="row">
 				<div class="col-md-12">
 
-					<form class="form-horizontal">
+					<form class="form-horizontal" role="form" data-toggle="validator">
 						<div class="row">
 							<div class="col-sm-offset-1 col-sm-4">
 								<div class="form-group">
 									<label for="input-name" class="col-sm-3 control-label">Name:</label>
 									<div class="col-sm-9">
-										<input type="text" class="form-control" id="input-name">
+										<input type="text" class="form-control" id="input-name" required>
+										<small class="help-block with-errors"></small>
 									</div>
 								</div>
 								<div class="form-group">
 									<label for="input-email" class="col-sm-3 control-label">Email:</label>
 									<div class="col-sm-9">
-										<input type="email" class="form-control" id="input-email">
+										<input type="email" class="form-control" id="input-email" required>
+										<small class="help-block with-errors"></small>
 									</div>
 								</div>
 								<div class="form-group">
 									<label for="input-phone" class="col-sm-3 control-label">Phone:</label>
 									<div class="col-sm-9">
-										<input type="text" class="form-control" id="input-phone">
+										<input type="text" class="form-control" id="input-phone" required>
+										<small class="help-block with-errors"></small>
 									</div>
 								</div>
 							</div>
@@ -657,7 +660,8 @@
 								<div class="form-group">
 									<label for="textarea-message" class="col-sm-3 control-label">Message:</label>
 									<div class="col-sm-9">
-										<textarea class="form-control" rows="6" id="textarea-message"></textarea>
+										<textarea class="form-control" rows="7" id="textarea-message" required></textarea>
+										<small class="help-block with-errors"></small>
 									</div>
 								</div>
 							</div>
@@ -861,6 +865,7 @@
 	<script src="resources/vendor/imagesloaded.pkgd.min.js"></script>
 	<script src="resources/vendor/jquery.easing.min.js"></script>
 	<script src="resources/vendor/scrolling-nav.js"></script>
+	<script src="resources/vendor/bootstrap-validator/validator.min.js"></script>
 	<script src="resources/vendor/jquery-cookie-pluigin.js"></script>
 
 	<script>

@@ -726,3 +726,25 @@ footer i:hover {
   background-color: @mainColor;
   border-color: @mainColor;
 }
+
+.has-error .checkbox, .has-error .checkbox-inline, .has-error .control-label, .has-error .help-block, .has-error .radio,
+.has-error .radio-inline, .has-error.checkbox label, .has-error.checkbox-inline label, .has-error.radio label,
+.has-error.radio-inline label {
+  color: #FB0001;
+  transition:all 0.7s ease-out;
+}
+
+.has-error .form-control {
+  border-color: #FB0001;
+  transition:all 0.7s ease-out;
+}
+
+.btn-default.disabled, .btn-default[disabled], fieldset[disabled] .btn-default, .btn-default.disabled:hover,
+.btn-default[disabled]:hover, fieldset[disabled] .btn-default:hover, .btn-default.disabled:focus,
+.btn-default[disabled]:focus, fieldset[disabled] .btn-default:focus, .btn-default.disabled:active,
+.btn-default[disabled]:active, fieldset[disabled] .btn-default:active, .btn-default.disabled.active,
+.btn-default[disabled].active, fieldset[disabled] .btn-default.active {
+  color: @mainColor;
+  background-color: @secondaryFontColor;
+  border-color: #ccc;
+}
