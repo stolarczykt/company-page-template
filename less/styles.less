@@ -234,6 +234,20 @@ i {
   color: @mainColor;
   font-weight: bold;
   font-size: 1.4em;
+  cursor: pointer;
+}
+
+.project-description .fa-search-plus {
+  color: @mainColor;
+  cursor: pointer;
+  transition:all 0.3s ease-out;
+}
+
+.project-description .fa-search-plus:hover {
+  -webkit-transform: scale(1.15);
+  -ms-transform: scale(1.15);
+  transform: scale(1.15);
+  transition:all 0.3s ease-out;
 }
 
 .project-item:hover .project-over-layer {
@@ -264,6 +278,21 @@ i {
 .our-works input:checked + .btn {
   background: @secondaryFontColor;
   color: @mainColor;
+}
+
+.modal-content {
+  border: 3px solid @mainColor;
+  border-radius: 0;
+}
+
+.modal-header {
+  border-bottom: 1px solid @mainColor;
+}
+
+.modal-title {
+  margin: 10px 0;
+  color: @mainColor;
+  font-weight: bold;
 }
 
 #news {
