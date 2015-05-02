@@ -8,7 +8,7 @@ module.exports = function(grunt) {
 					paths: ["less/"]
 				},
 				files: {
-					"resources/css/default.css": "less/colors/default.less",
+					"resources/css/blue-and-white.css": "less/colors/blue-and-white.less",
 					"resources/css/yellow-and-black.css": "less/colors/yellow-and-black.less",
 					"resources/css/aqua-and-dark-blue.css": "less/colors/aqua-and-dark-blue.less",
 					"resources/css/aqua-and-black.css": "less/colors/aqua-and-black.less",
