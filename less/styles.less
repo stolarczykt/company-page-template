@@ -4,12 +4,87 @@ body {
   position: relative;
 }
 
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  letter-spacing: -1px;
+}
+
+h1, .h1 {
+  font-size: 55px;
+}
+
+h2, .h2 {
+  font-size: 46px;
+}
+
+h3, .h3 {
+  font-size: 38px;
+}
+
+h4, .h4 {
+  font-size: 30px;
+}
+
+h5, .h5 {
+  font-size: 22px;
+}
+
+h6, .h6 {
+  font-size: 16px;
+}
+
 section {
   padding: 30px 0;
 }
 
 i {
-  color: @mainColor;
+  color: @firstColor;
+}
+
+a, a:hover, a:visited, a:focus, a:active {
+  color: @firstColor;
+  text-decoration: none;
+}
+
+a.link-brackets::before,
+a.link-brackets::after {
+  display: inline-block;
+  opacity: 0;
+  -webkit-transition: -webkit-transform @transSpeedFast, opacity @transSpeedFast;
+  -moz-transition: -moz-transform @transSpeedFast, opacity @transSpeedFast;
+  transition: transform @transSpeedFast, opacity @transSpeedFast;
+}
+
+a.link-brackets::before {
+  margin-right: 10px;
+  content: '[';
+  -webkit-transform: translateX(20px);
+  -moz-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+a.link-brackets::after {
+  margin-left: 10px;
+  content: ']';
+  -webkit-transform: translateX(-20px);
+  -moz-transform: translateX(-20px);
+  transform: translateX(-20px);
+}
+
+a.link-brackets:hover::before,
+a.link-brackets:hover::after,
+a.link-brackets:focus::before,
+a.link-brackets:focus::after {
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  transform: translateX(0px);
 }
 
 .carousel .item {
@@ -21,16 +96,16 @@ i {
 }
 
 .carousel-indicators li {
-  border: 1px solid @mainColor;
+  border: 1px solid @firstColor;
 }
 
 .carousel-indicators .active {
-  background-color: @mainColor;
+  background-color: @firstColor;
 }
 
 .slide-content {
-  background-color: @mainColorRGBa;
-  color: @secondaryFontColor;
+  background-color: @firstColorRGBa;
+  color: @secondColor;
   position: absolute;
   top: 30%;
   width: 100%;
@@ -42,27 +117,16 @@ i {
   letter-spacing: -4px;
 }
 
-.slide-content h2 {
-  font-weight: 300;
-  letter-spacing: -1px;
-}
-
 .section-header {
-  border-bottom: 3px solid @mainColor;
+  border-bottom: 3px solid @firstColor;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 40px;
 }
 
-.section-header h1, .section-header-inverted h1 {
-  font-weight: 300;
-  letter-spacing: -1px;
-  font-size: 55px;
-}
-
 .section-header-inverted {
-  color: @secondaryFontColor;
-  border-bottom: 3px solid @secondaryFontColor;
+  color: @secondColor;
+  border-bottom: 3px solid @secondColor;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 10px;
@@ -80,15 +144,15 @@ i {
 }
 
 .service .fa-stack-2x {
-  color: @mainColor;
+  color: @firstColor;
 }
 
 .service .fa-stack-1x {
-  color: @secondaryFontColor;
+  color: @secondColor;
 }
 
 .service .fa-stack-1x {
-  transition:all 0.3s ease-out;
+  transition:all @transSpeedFast ease-out;
 }
 
 .service:hover .fa-stack-1x {
@@ -96,7 +160,7 @@ i {
   -webkit-transform: scale(-1, 1);
   -ms-transform: scale(-1, 1);
   transform: scale(-1, 1);
-  transition:all 0.3s ease-out;
+  transition:all @transSpeedFast ease-out;
 }
 
 .service p {
@@ -104,15 +168,11 @@ i {
   font-size: 1em;
 }
 
-.service h2 {
-  font-weight: 300;
-}
-
 .quotation {
   background: linear-gradient(
-		  rgba(0, 0, 0, 0.7),
-		  rgba(0, 0, 0, 0.7)
-  ),  url('../img/quotation-bg.jpg') no-repeat center center fixed;
+    @blackRGBa,
+    @blackRGBa
+  ),  url(@quotationBackgroundImg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -180,14 +240,14 @@ i {
 
 .our-works {
   background: linear-gradient(
-		  @ourWorksRGBa,
-          @ourWorksRGBa
-  ),  url('../img/our-works-bg.jpg') no-repeat center center fixed;
+    @firstColorRGBa,
+    @firstColorRGBa
+  ),  url(@ourWorksBackgroundImg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  color: @secondaryFontColor;
+  color: @secondColor;
 }
 
 #isotope {
@@ -204,14 +264,14 @@ i {
 
 .project-over-layer {
   background: linear-gradient(
-		rgba(255, 255, 255, 0.8),
-		rgba(255, 255, 255, 0.8)
+    @whiteRGBa,
+    @whiteRGBa
   );
   width: 100%;
   height: 100%;
   position: absolute;
   top: -100%;
-  transition:all 0.3s ease-out;
+  transition:all @transSpeedFast ease-out;
   text-align: center;
   color: @mainFontColor;
   cursor: pointer;
@@ -227,31 +287,30 @@ i {
   padding: 0 15px;
 }
 
-.project-description h1 {
-  border-bottom: 2px solid @mainColor;
+.project-description h5 {
+  border-bottom: 2px solid @firstColor;
   margin-left: 10%;
   margin-right: 10%;
   padding-bottom: 5px;
-  color: @mainColor;
-  font-weight: bold;
-  font-size: 1.4em;
+  color: @firstColor;
+  font-weight: 700;
 }
 
 .project-description .fa-search-plus {
-  color: @mainColor;
-  transition:all 0.3s ease-out;
+  color: @firstColor;
+  transition:all @transSpeedFast ease-out;
 }
 
 .project-description .fa-search-plus:hover {
   -webkit-transform: scale(1.15);
   -ms-transform: scale(1.15);
   transform: scale(1.15);
-  transition:all 0.3s ease-out;
+  transition:all @transSpeedFast ease-out;
 }
 
 .project-item:hover .project-over-layer {
   top: 0;
-  transition:all 0.3s ease-out;
+  transition:all @transSpeedFast ease-out;
 }
 
 #filters {
@@ -260,14 +319,14 @@ i {
 
 .our-works .btn {
   background: transparent;
-  color: @secondaryFontColor;
+  color: @secondColor;
   font-weight: bold;
   font-size: 1.3em;
 }
 
 .our-works .btn:hover {
-  background: @secondaryFontColor;
-  color: @mainColor;
+  background: @secondColor;
+  color: @firstColor;
 }
 
 .our-works input {
@@ -275,24 +334,24 @@ i {
 }
 
 .our-works input:checked + .btn {
-  background: @secondaryFontColor;
-  color: @mainColor;
+  background: @secondColor;
+  color: @firstColor;
 }
 
 .modal-content {
   color: @mainFontColor;
   text-align: left;
-  border: 3px solid @mainColor;
+  border: 3px solid @firstColor;
   border-radius: 0;
 }
 
 .modal-header {
-  border-bottom: 1px solid @mainColor;
+  border-bottom: 1px solid @firstColor;
 }
 
 .modal-title {
   margin: 10px 0;
-  color: @mainColor;
+  color: @firstColor;
   font-weight: bold;
 }
 
@@ -316,19 +375,19 @@ i {
   text-align: center;
   width: 100%;
   height: 100%;
-  background: @mainColor;
+  background: @firstColor;
   position: absolute;
   top: 100%;
   left: 0;
-  transition:all 0.3s ease-out;
+  transition: all @transSpeedFast ease-out;
 }
 
 .news-img-overlayer .fa-stack-1x {
-  color: @mainColor;
+  color: @firstColor;
 }
 
 .news-img-overlayer .fa-stack-2x {
-  color: @secondaryFontColor;
+  color: @secondColor;
 }
 
 .news-item {
@@ -337,21 +396,21 @@ i {
 
 .news-item:hover .news-img-overlayer {
   top: 40%;
-  transition:all 0.3s ease-out;
+  transition:all @transSpeedFast ease-out;
 }
 
 .news-text {
   font-size: 0.9em;
   padding: 10px;
   overflow: hidden;
-  background: @mainColor;
-  color: @secondaryFontColor;
+  background: @firstColor;
+  color: @secondColor;
   min-height: 50px;
 }
 
-.news-text h4 {
-  margin-bottom: 0px;
-  font-weight: bold;
+.news-text h5 {
+  margin-bottom: 0;
+  font-weight: 700;
 }
 
 #news .news-text p {
@@ -360,17 +419,17 @@ i {
 }
 
 .news-text .btn {
-  background: @secondaryFontColor;
-  color: @mainColor;
+  background: @secondColor;
+  color: @firstColor;
   font-weight: bold;
   border-radius: 0;
-  transition:all 0.5s ease-out;
+  transition:all @transSpeedNormal ease-out;
 }
 
 .news-text .btn:hover {
-  background: linear-gradient(@mainColorRGBa, @mainColorRGBa) @secondaryFontColor;
-  color: @mainColor;
-  transition:all 0.5s ease-out;
+  background: linear-gradient(@firstColorRGBa, @firstColorRGBa) @secondColor;
+  color: @firstColor;
+  transition:all @transSpeedNormal ease-out;
 }
 
 .read-more {
@@ -383,11 +442,11 @@ i {
   background: @teamBackground;
 }
 
-.team-member h4 {
+.team-member h5 {
   padding: 10px;
   text-align: center;
-  font-weight: bold;
-  border-bottom: 1px solid @mainColor;
+  font-weight: 700;
+  border-bottom: 1px solid @firstColor;
 }
 
 .team-member p {
@@ -403,22 +462,22 @@ i {
   filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
   filter: gray;
   -webkit-filter: grayscale(100%);
-  transition: all 0.3s ease-out;
+  transition: all @transSpeedFast ease-out;
 }
 
-.team-member:hover h4 {
-  background: @mainColor;
-  color: @secondaryFontColor;
-  transition: all 0.3s ease-out;
+.team-member:hover h5 {
+  background: @firstColor;
+  color: @secondColor;
+  transition: all @transSpeedFast ease-out;
 }
 
 .contact {
   background: linear-gradient(
-		  rgba(255, 255, 255, 0.8),
-		  rgba(255, 255, 255, 0.8)
-  ),  url('../img/contact-bg.jpg') no-repeat center center fixed;
-  border-top: 5px solid @mainColor;
-  border-bottom: 5px solid @mainColor;
+    @whiteRGBa,
+    @whiteRGBa
+  ),  url(@contactBackgroundImg) no-repeat center center fixed;
+  border-top: 5px solid @firstColor;
+  border-bottom: 5px solid @firstColor;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -430,7 +489,7 @@ i {
 }
 
 .contact-info .fa {
-  color: @mainColor;
+  color: @firstColor;
 }
 
 .phone-number {
@@ -448,20 +507,20 @@ i {
 .btn-default {
   text-shadow: 0 0 0;
   font-size: 1.5em;
-  background: @mainColor;
-  color: @secondaryFontColor;
+  background: @firstColor;
+  color: @secondColor;
   padding: 10px 40px;
   border-radius: 0;
   text-transform: uppercase;
-  transition:all 0.5s ease-out;
+  transition:all @transSpeedNormal ease-out;
 }
 
 .btn-default:hover {
   text-shadow: 0 0 0;
-  background: @secondaryFontColor;
-  color: @mainColor;
-  border: 1px solid @mainColor;
-  transition:all 0.5s ease-out;
+  background: @secondColor;
+  color: @firstColor;
+  border: 1px solid @firstColor;
+  transition:all @transSpeedNormal ease-out;
 }
 
 #map-container {
@@ -469,15 +528,15 @@ i {
 }
 
 footer {
-  background: @mainColor;
+  background: @firstColor;
   padding: 30px 0;
 }
 
 footer i {
-  color: @secondaryFontColor;
+  color: @secondColor;
   float: right;
   margin: 0 5px;
-  transition:all 0.3s ease-out;
+  transition:all @transSpeedFast ease-out;
 }
 
 footer i:hover {
@@ -485,87 +544,88 @@ footer i:hover {
   -webkit-transform: scale(-1, 1);
   -ms-transform: scale(-1, 1);
   transform: scale(-1, 1);
-  transition:all 0.3s ease-out;
+  transition:all @transSpeedFast ease-out;
 }
 
 .navbar-default {
   border-color: transparent;
-  background: @secondaryFontColor none;
+  background: @secondColor none;
   box-shadow: none;
   font-size: 1.2em;
   padding: 20px 0;
-  -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
-  -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
-  transition: background .5s ease-in-out,padding .5s ease-in-out;
+  -webkit-transition: background @transSpeedNormal ease-in-out,padding @transSpeedNormal ease-in-out;
+  -moz-transition: background @transSpeedNormal ease-in-out,padding @transSpeedNormal ease-in-out;
+  transition: background @transSpeedNormal ease-in-out,padding @transSpeedNormal ease-in-out;
 }
 
 .navbar-default .navbar-nav>li>a,
 .navbar-default .navbar-nav>li>a:hover,
 .navbar-default .navbar-brand,
+.navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-  color: @mainColor;
+  color: @firstColor;
 }
 
 .navbar-default .navbar-nav>li.active>a,
 .navbar-default .navbar-nav>.active>a:hover,
 .navbar-default .navbar-nav>.active>a:focus {
-  background: @secondaryFontColor;
+  background: @secondColor;
   box-shadow: none;
-  color: @mainColor;
-  -webkit-transition: background .5s ease-in-out;
-  -moz-transition: background .5s ease-in-out;
-  transition: background .5s ease-in-out;
+  color: @firstColor;
+  -webkit-transition: background @transSpeedNormal ease-in-out;
+  -moz-transition: background @transSpeedNormal ease-in-out;
+  transition: background @transSpeedNormal ease-in-out;
 }
 
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus,
 .navbar-default .navbar-nav > .dropdown > a:focus {
-  background-color: @mainColor;
-  color: @secondaryFontColor;
+  background-color: @firstColor;
+  color: @secondColor;
 }
 
 .navbar-default.top-nav-collapse {
   padding: 0;
-  border-color: @mainColor;
-  background: @mainColor none;
+  border-color: @firstColor;
+  background: @firstColor none;
   box-shadow: none;
 }
 
 .navbar-default.top-nav-collapse .navbar-nav>li>a,
 .navbar-default.top-nav-collapse .navbar-nav>li>a:hover,
 .navbar-default.top-nav-collapse .navbar-brand, {
-  color: @secondaryFontColor;
+  color: @secondColor;
 }
 
 .navbar-default .navbar-nav>li.active>a,
 .navbar-default.top-nav-collapse .navbar-nav>li.active>a:hover,
 .navbar-default.top-nav-collapse .navbar-nav>li.active>a:focus {
-  color: @mainColor;
+  color: @firstColor;
 }
 
 .navbar-default .navbar-nav>li:before,
 .navbar-default.top-nav-collapse .navbar-nav>li:before {
   content: "";
   position: absolute;
-  z-index: 99;
+  z-index: 999;
   left: 50%;
   right: 50%;
   bottom: 0;
-  background: @mainColor;
+  background: @firstColor;
   height: 2px;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-transition-property: left, right;
   transition-property: left, right;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
+  -webkit-transition-duration: @transSpeedFast;
+  transition-duration: @transSpeedFast;
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
 
 .navbar-default.top-nav-collapse .navbar-nav>li:before {
-  background: @secondaryFontColor;
+  background: @secondColor;
 
 }
 .navbar-default .navbar-nav>li:hover:before,
@@ -579,12 +639,11 @@ footer i:hover {
   margin-top: 100px;
 }
 .post-preview {
-  border-bottom: 2px solid @mainColor;
+  border-bottom: 2px solid @firstColor;
   margin-bottom: 50px;
 }
 .post-preview h1 {
-  font-size: 2em;
-  font-weight: normal;
+  font-size: 28px;
   margin-top: 0;
   margin-bottom: 20px;
 }
@@ -594,23 +653,15 @@ footer i:hover {
   text-align: justify;
 }
 .post-preview .read-more {
-  color: @mainColor;
   font-weight: bold;
   text-align: right;
   float: right;
   margin-bottom: 20px;
   font-size: 1.2em;
 }
-.post-preview .read-more:hover {
-  text-decoration: none;
-}
 .leave-a-comment {
-  color: @mainColor;
   font-weight: bold;
   font-size: 1.2em;
-}
-.leave-a-comment:hover {
-  text-decoration: none;
 }
 .tag {
   font-size: 2em;
@@ -622,7 +673,7 @@ footer i:hover {
 .post-details {
   padding-bottom: 50px;
 }
-.newsletter h1 {
+.newsletter h3 {
   text-align: center;
 }
 
@@ -642,8 +693,8 @@ footer i:hover {
   font-size: 1.2em;
   margin: 5px;
   padding: 5px;
-  border: 1px solid #b9b9b9;
-  color: @mainColor;
+  border: 1px solid @lightGrey;
+  color: @firstColor;
 }
 .social span {
   color: @mainFontColor;
@@ -653,18 +704,18 @@ footer i:hover {
 }
 .social:hover {
   text-decoration: none;
-  color: @mainColor;
+  color: @firstColor;
 }
 
 .post-preview hr {
   width: 40%;
   margin: 10px 0;
   height: 2px;
-  background-color:#b9b9b9;
+  background-color: @lightGrey;
   border: 0 none;
 }
 
-.comments h1 {
+.comments h4 {
   margin-bottom: 0;
 }
 
@@ -672,14 +723,14 @@ footer i:hover {
   padding: 0;
 }
 
-.comment h2 {
-  color: #3a3a3a;
-  font-weight: bold;
+.comment h4 {
+  color: @darkGrey;
+  font-weight: 700;
   margin-top: 0;
   margin-bottom: 5px;
 }
 .comment .date {
-  color: #3a3a3a;
+  color: @darkGrey;
   font-weight: bold;
 }
 .comment p {
@@ -692,7 +743,7 @@ footer i:hover {
   padding: 0;
 }
 
-.post-reply h1 {
+.post-reply h4 {
   margin: 10px 0;
 }
 
@@ -719,26 +770,26 @@ footer i:hover {
   color: @mainFontColor;
 }
 .pagination>li>a:hover, .pagination>li>span:hover, .pagination>li>a:focus, .pagination>li>span:focus {
-  color: @mainColor;
+  color: @firstColor;
 }
 
 .pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover,
 .pagination>.active>a:focus, .pagination>.active>span:focus {
-  color: @secondaryFontColor;
-  background-color: @mainColor;
-  border-color: @mainColor;
+  color: @secondColor;
+  background-color: @firstColor;
+  border-color: @firstColor;
 }
 
 .has-error .checkbox, .has-error .checkbox-inline, .has-error .control-label, .has-error .help-block, .has-error .radio,
 .has-error .radio-inline, .has-error.checkbox label, .has-error.checkbox-inline label, .has-error.radio label,
 .has-error.radio-inline label {
-  color: #FB0001;
-  transition:all 0.7s ease-out;
+  color: @errorColor;
+  transition:all @transSpeedSlow ease-out;
 }
 
 .has-error .form-control {
-  border-color: #FB0001;
-  transition:all 0.7s ease-out;
+  border-color: @errorColor;
+  transition:all @transSpeedSlow ease-out;
 }
 
 .btn-default.disabled, .btn-default[disabled], fieldset[disabled] .btn-default, .btn-default.disabled:hover,
@@ -746,7 +797,7 @@ footer i:hover {
 .btn-default[disabled]:focus, fieldset[disabled] .btn-default:focus, .btn-default.disabled:active,
 .btn-default[disabled]:active, fieldset[disabled] .btn-default:active, .btn-default.disabled.active,
 .btn-default[disabled].active, fieldset[disabled] .btn-default.active {
-  color: @mainColor;
-  background-color: @secondaryFontColor;
-  border-color: #ccc;
+  color: @firstColor;
+  background-color: @secondColor;
+  border-color: @lightGrey;
 }
