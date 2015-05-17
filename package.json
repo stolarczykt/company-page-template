@@ -1,7 +1,7 @@
 {
-  "name": "bluejay",
+  "name": "BeeEater",
   "version": "0.1.0",
-  "description": "bluejay project",
+  "description": "BeeEater",
   "author": "PontaIT",
   "devDependencies": {
     "grunt-contrib-less": "1.0.0",
