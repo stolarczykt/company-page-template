@@ -58,6 +58,7 @@ a.link-brackets::after {
   opacity: 0;
   -webkit-transition: -webkit-transform @transSpeedFast, opacity @transSpeedFast;
   -moz-transition: -moz-transform @transSpeedFast, opacity @transSpeedFast;
+  -o-transition: -o-transform @transSpeedFast, opacity @transSpeedFast;
   transition: transform @transSpeedFast, opacity @transSpeedFast;
 }
 
@@ -66,6 +67,8 @@ a.link-brackets::before {
   content: '[';
   -webkit-transform: translateX(20px);
   -moz-transform: translateX(20px);
+  -o-transform: translateX(20px);
+  -ms-transform: translateX(20px);
   transform: translateX(20px);
 }
 
@@ -74,6 +77,8 @@ a.link-brackets::after {
   content: ']';
   -webkit-transform: translateX(-20px);
   -moz-transform: translateX(-20px);
+  -o-transform: translateX(-20px);
+  -ms-transform: translateX(-20px);
   transform: translateX(-20px);
 }
 
@@ -84,6 +89,8 @@ a.link-brackets:focus::after {
   opacity: 1;
   -webkit-transform: translateX(0px);
   -moz-transform: translateX(0px);
+  -o-transform: translateX(0px);
+  -ms-transform: translateX(0px);
   transform: translateX(0px);
 }
 
@@ -157,6 +164,8 @@ a.link-brackets:focus::after {
 
 .service:hover .fa-stack-1x {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1);
+  -moz-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
   -webkit-transform: scale(-1, 1);
   -ms-transform: scale(-1, 1);
   transform: scale(-1, 1);
@@ -271,6 +280,9 @@ a.link-brackets:focus::after {
   height: 100%;
   position: absolute;
   top: -100%;
+  -moz-transition:all @transSpeedFast ease-out;
+  -webkit-transition:all @transSpeedFast ease-out;
+  -o-transition:all @transSpeedFast ease-out;
   transition:all @transSpeedFast ease-out;
   text-align: center;
   color: @mainFontColor;
@@ -298,11 +310,16 @@ a.link-brackets:focus::after {
 
 .project-description .fa-search-plus {
   color: @firstColor;
+  -moz-transition:all @transSpeedFast ease-out;
+  -webkit-transition:all @transSpeedFast ease-out;
+  -o-transition:all @transSpeedFast ease-out;
   transition:all @transSpeedFast ease-out;
 }
 
 .project-description .fa-search-plus:hover {
   -webkit-transform: scale(1.15);
+  -moz-transform: scale(1.15);
+  -o-transform: scale(1.15);
   -ms-transform: scale(1.15);
   transform: scale(1.15);
   transition:all @transSpeedFast ease-out;
@@ -310,6 +327,9 @@ a.link-brackets:focus::after {
 
 .project-item:hover .project-over-layer {
   top: 0;
+  -moz-transition:all @transSpeedFast ease-out;
+  -webkit-transition:all @transSpeedFast ease-out;
+  -o-transition:all @transSpeedFast ease-out;
   transition:all @transSpeedFast ease-out;
 }
 
@@ -379,6 +399,9 @@ a.link-brackets:focus::after {
   position: absolute;
   top: 100%;
   left: 0;
+  -moz-transition:all @transSpeedFast ease-out;
+  -webkit-transition:all @transSpeedFast ease-out;
+  -o-transition:all @transSpeedFast ease-out;
   transition: all @transSpeedFast ease-out;
 }
 
@@ -396,6 +419,9 @@ a.link-brackets:focus::after {
 
 .news-item:hover .news-img-overlayer {
   top: 40%;
+  -moz-transition:all @transSpeedFast ease-out;
+  -webkit-transition:all @transSpeedFast ease-out;
+  -o-transition:all @transSpeedFast ease-out;
   transition:all @transSpeedFast ease-out;
 }
 
@@ -423,12 +449,18 @@ a.link-brackets:focus::after {
   color: @firstColor;
   font-weight: bold;
   border-radius: 0;
+  -moz-transition:all @transSpeedNormal ease-out;
+  -webkit-transition:all @transSpeedNormal ease-out;
+  -o-transition:all @transSpeedNormal ease-out;
   transition:all @transSpeedNormal ease-out;
 }
 
 .news-text .btn:hover {
   background: linear-gradient(@firstColorRGBa, @firstColorRGBa) @secondColor;
   color: @firstColor;
+  -moz-transition:all @transSpeedNormal ease-out;
+  -webkit-transition:all @transSpeedNormal ease-out;
+  -o-transition:all @transSpeedNormal ease-out;
   transition:all @transSpeedNormal ease-out;
 }
 
@@ -462,12 +494,18 @@ a.link-brackets:focus::after {
   filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
   filter: gray;
   -webkit-filter: grayscale(100%);
+  -moz-transition:all @transSpeedFast ease-out;
+  -webkit-transition:all @transSpeedFast ease-out;
+  -o-transition:all @transSpeedFast ease-out;
   transition: all @transSpeedFast ease-out;
 }
 
 .team-member:hover h5 {
   background: @firstColor;
   color: @secondColor;
+  -moz-transition:all @transSpeedFast ease-out;
+  -webkit-transition:all @transSpeedFast ease-out;
+  -o-transition:all @transSpeedFast ease-out;
   transition: all @transSpeedFast ease-out;
 }
 
@@ -512,6 +550,9 @@ a.link-brackets:focus::after {
   padding: 10px 40px;
   border-radius: 0;
   text-transform: uppercase;
+  -moz-transition:all @transSpeedNormal ease-out;
+  -webkit-transition:all @transSpeedNormal ease-out;
+  -o-transition:all @transSpeedNormal ease-out;
   transition:all @transSpeedNormal ease-out;
 }
 
@@ -520,6 +561,9 @@ a.link-brackets:focus::after {
   background: @secondColor;
   color: @firstColor;
   border: 1px solid @firstColor;
+  -moz-transition:all @transSpeedNormal ease-out;
+  -webkit-transition:all @transSpeedNormal ease-out;
+  -o-transition:all @transSpeedNormal ease-out;
   transition:all @transSpeedNormal ease-out;
 }
 
@@ -536,14 +580,22 @@ footer i {
   color: @secondColor;
   float: right;
   margin: 0 5px;
+  -moz-transition:all @transSpeedFast ease-out;
+  -webkit-transition:all @transSpeedFast ease-out;
+  -o-transition:all @transSpeedFast ease-out;
   transition:all @transSpeedFast ease-out;
 }
 
 footer i:hover {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1);
   -webkit-transform: scale(-1, 1);
+  -moz-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
   -ms-transform: scale(-1, 1);
   transform: scale(-1, 1);
+  -moz-transition:all @transSpeedFast ease-out;
+  -webkit-transition:all @transSpeedFast ease-out;
+  -o-transition:all @transSpeedFast ease-out;
   transition:all @transSpeedFast ease-out;
 }
 
@@ -555,6 +607,7 @@ footer i:hover {
   padding: 20px 0;
   -webkit-transition: background @transSpeedNormal ease-in-out,padding @transSpeedNormal ease-in-out;
   -moz-transition: background @transSpeedNormal ease-in-out,padding @transSpeedNormal ease-in-out;
+  -o-transition: background @transSpeedNormal ease-in-out,padding @transSpeedNormal ease-in-out;
   transition: background @transSpeedNormal ease-in-out,padding @transSpeedNormal ease-in-out;
 }
 
@@ -574,6 +627,7 @@ footer i:hover {
   color: @firstColor;
   -webkit-transition: background @transSpeedNormal ease-in-out;
   -moz-transition: background @transSpeedNormal ease-in-out;
+  -o-transition: background @transSpeedNormal ease-in-out;
   transition: background @transSpeedNormal ease-in-out;
 }
 
@@ -615,12 +669,21 @@ footer i:hover {
   background: @firstColor;
   height: 2px;
   -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  -ms-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-transition-property: left, right;
+  -moz-transition-property: left, right;
+  -o-transition-property: left, right;
   transition-property: left, right;
   -webkit-transition-duration: @transSpeedFast;
+  -moz-transition-duration: @transSpeedFast;
+  -o-transition-duration: @transSpeedFast;
   transition-duration: @transSpeedFast;
   -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
 
@@ -784,11 +847,17 @@ footer i:hover {
 .has-error .radio-inline, .has-error.checkbox label, .has-error.checkbox-inline label, .has-error.radio label,
 .has-error.radio-inline label {
   color: @errorColor;
+  -moz-transition:all @transSpeedSlow ease-out;
+  -webkit-transition:all @transSpeedSlow ease-out;
+  -o-transition:all @transSpeedSlow ease-out;
   transition:all @transSpeedSlow ease-out;
 }
 
 .has-error .form-control {
   border-color: @errorColor;
+  -moz-transition:all @transSpeedSlow ease-out;
+  -webkit-transition:all @transSpeedSlow ease-out;
+  -o-transition:all @transSpeedSlow ease-out;
   transition:all @transSpeedSlow ease-out;
 }
 
