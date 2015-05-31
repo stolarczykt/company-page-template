@@ -20,6 +20,21 @@ module.exports = function(grunt) {
 				}
 			}
 		},
+		sass: {
+			development: {
+				files: {
+					"resources/css/blue-and-white.css": "css-langs/sass/colors/blue-and-white.scss",
+					"resources/css/yellow-and-black.css": "css-langs/sass/colors/yellow-and-black.scss",
+					"resources/css/aqua-and-dark-blue.css": "css-langs/sass/colors/aqua-and-dark-blue.scss",
+					"resources/css/aqua-and-black.css": "css-langs/sass/colors/aqua-and-black.scss",
+					"resources/css/green-and-dark-blue.css": "css-langs/sass/colors/green-and-dark-blue.scss",
+					"resources/css/pink-and-grey.css": "css-langs/sass/colors/pink-and-grey.scss",
+					"resources/css/brown-and-beige.css": "css-langs/sass/colors/brown-and-beige.scss",
+					"resources/css/grey-and-cobalt.css": "css-langs/sass/colors/grey-and-cobalt.scss"
+
+				}
+			}
+		},
 		watch: {
 			options: {
 				livereload: true
@@ -28,6 +43,10 @@ module.exports = function(grunt) {
 				files: ['css-langs/less/*.less', 'css-langs/less/colors/*.less'],
 				tasks: ['less:development']
 			},
+			//sass: {
+			//	files: ['css-langs/sass/*.scss', 'css-langs/sass/colors/*.scss'],
+			//	tasks: ['sass:development']
+			//},
 			js: {
 				files: ['resources/js/*.js', 'resources/vendor/*.js']
 			},
@@ -37,5 +56,6 @@ module.exports = function(grunt) {
 		}
 	});
 	grunt.loadNpmTasks('grunt-contrib-less');
+	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 };
