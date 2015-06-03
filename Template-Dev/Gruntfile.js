@@ -3,7 +3,7 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		less: {
-			development: {
+			compile: {
 				options: {
 					paths: ["css-langs/less/"]
 				},
@@ -21,7 +21,7 @@ module.exports = function(grunt) {
 			}
 		},
 		sass: {
-			development: {
+			compile: {
 				files: {
 					"resources/css/blue-and-white.css": "css-langs/sass/colors/blue-and-white.scss",
 					"resources/css/yellow-and-black.css": "css-langs/sass/colors/yellow-and-black.scss",
@@ -41,11 +41,11 @@ module.exports = function(grunt) {
 			},
 			less: {
 				files: ['css-langs/less/*.less', 'css-langs/less/colors/*.less'],
-				tasks: ['less:development']
+				tasks: ['less:compile']
 			},
 			//sass: {
 			//	files: ['css-langs/sass/*.scss', 'css-langs/sass/colors/*.scss'],
-			//	tasks: ['sass:development']
+			//	tasks: ['sass:compile']
 			//},
 			js: {
 				files: ['resources/js/*.js', 'resources/vendor/*.js']
@@ -53,8 +53,38 @@ module.exports = function(grunt) {
 			html: {
 				files: ['*.html']
 			}
+		},
+
+		copy: {
+			dist: {
+				files: [
+					{
+						expand: true,
+						dot: true,
+						cwd: "./",
+						dest: "dist",
+						src: ["*.html", "resources/**/*"]
+					}
+				]
+			}
+		},
+
+		clean: {
+			dist: {
+				files: [
+					{
+						dot: true,
+						src: ["dist/*", "!dist/.git*"]
+					}
+				]
+			}
 		}
 	});
+
+	grunt.registerTask("build", ["less:compile", "clean:dist", "copy:dist"]);
+
+	grunt.loadNpmTasks('grunt-contrib-clean');
+	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
