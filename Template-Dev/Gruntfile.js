@@ -78,11 +78,31 @@ module.exports = function(grunt) {
 					}
 				]
 			}
+		},
+
+		connect: {
+			options: {
+				port: 9000,
+				hostname: 'localhost'
+			},
+			dev: {
+				options: {
+					middleware:
+						function (connect) {
+							return [
+								require('connect-livereload')(),
+								connect.static(require('path').resolve('.'))
+							];
+					}
+				}
+			}
 		}
 	});
 
+	grunt.registerTask("server", ["connect:dev", "watch"]);
 	grunt.registerTask("build", ["less:compile", "clean:dist", "copy:dist"]);
 
+	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-less');
