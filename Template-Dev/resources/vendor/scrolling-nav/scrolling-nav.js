@@ -1,3 +1,6 @@
+//Source: http://startbootstrap.com/template-overviews/scrolling-nav/
+//Github: https://github.com/IronSummitMedia/startbootstrap-scrolling-nav
+
 //jQuery to collapse the navbar on scroll
 $(window).scroll(function() {
     if ($(".navbar").offset().top > 50) {

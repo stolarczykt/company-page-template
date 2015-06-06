@@ -10,13 +10,7 @@
 	<link rel="stylesheet" href="resources/vendor/bootstrap/css/bootstrap.min.css"/>
 	<link rel="stylesheet" href="resources/vendor/bootstrap/css/bootstrap-theme.min.css"/>
 	<link rel="stylesheet" href="resources/vendor/font-awesome/css/font-awesome.min.css"/>
-	<link id="theme" rel="stylesheet" href="resources/css/blue-and-white.css"/>
-	<style>
-		#themes li {
-			cursor: pointer;
-			width: 200px;
-		}
-	</style>
+	<link rel="stylesheet" href="resources/css/blue-and-white.css"/>
 
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="80">
@@ -53,66 +47,6 @@
 						</li>
 						<li>
 							<a class="page-scroll" href="blog.html">Blog</a>
-						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Themes <span class="caret"></span></a>
-							<ul id="themes" class="dropdown-menu" role="menu">
-								<li data-name="blue-and-white">
-										<span class="fa-stack">
-											<i class="fa fa-square fa-stack-2x" style="color: #2AACF7"></i>
-											<i class="fa fa-paint-brush fa-stack-1x" style="color: #ffffff"></i>
-										</span> blue and white
-								</li>
-								<li class="divider"></li>
-								<li data-name="yellow-and-black">
-										<span class="fa-stack">
-											<i class="fa fa-square fa-stack-2x" style="color: #FFC600"></i>
-											<i class="fa fa-paint-brush fa-stack-1x" style="color: #000000"></i>
-										</span> yellow and black
-								</li>
-								<li class="divider"></li>
-								<li data-name="aqua-and-dark-blue">
-										<span class="fa-stack">
-											<i class="fa fa-square fa-stack-2x" style="color: #494D60"></i>
-											<i class="fa fa-paint-brush fa-stack-1x" style="color: #C4E6E2"></i>
-										</span> aqua and dark blue
-								</li>
-								<li class="divider"></li>
-								<li data-name="green-and-dark-blue">
-										<span class="fa-stack">
-											<i class="fa fa-square fa-stack-2x" style="color: #494D60"></i>
-											<i class="fa fa-paint-brush fa-stack-1x" style="color: #7DC24F"></i>
-										</span> green and dark blue
-								</li>
-								<li class="divider"></li>
-								<li data-name="aqua-and-black">
-										<span class="fa-stack">
-											<i class="fa fa-square fa-stack-2x" style="color: #43B6B1"></i>
-											<i class="fa fa-paint-brush fa-stack-1x" style="color: #000000"></i>
-										</span> aqua and black
-								</li>
-								<li class="divider"></li>
-								<li data-name="pink-and-grey">
-										<span class="fa-stack">
-											<i class="fa fa-square fa-stack-2x" style="color: #EA5DA1"></i>
-											<i class="fa fa-paint-brush fa-stack-1x" style="color: #dfeafc"></i>
-										</span> pink and grey
-								</li>
-								<li class="divider"></li>
-								<li data-name="brown-and-beige">
-										<span class="fa-stack">
-											<i class="fa fa-square fa-stack-2x" style="color: #b45956"></i>
-											<i class="fa fa-paint-brush fa-stack-1x" style="color: #f6e7ca"></i>
-										</span> brown and beige
-								</li>
-								<li class="divider"></li>
-								<li data-name="grey-and-cobalt">
-										<span class="fa-stack">
-											<i class="fa fa-square fa-stack-2x" style="color: #0047ad"></i>
-											<i class="fa fa-paint-brush fa-stack-1x" style="color: #dfeafc"></i>
-										</span> grey and cobalt
-								</li>
-							</ul>
 						</li>
 					</ul>
 				</div>
@@ -245,34 +179,8 @@
 <!--End of footer-->
 <script src="resources/vendor/jquery/jquery-min.js"></script>
 <script src="resources/vendor/bootstrap/js/bootstrap.min.js"></script>
-<script src="resources/vendor/jquery.easing.min.js"></script>
-<script src="resources/vendor/scrolling-nav.js"></script>
-<script src="resources/vendor/jquery-cookie-pluigin.js"></script>
+<script src="resources/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="resources/vendor/scrolling-nav/scrolling-nav.js"></script>
 
-<script>
-	if($.cookie('theme') !== undefined) {
-		var stylesheet = $.cookie('theme');
-
-		$('link#theme').attr('href', 'resources/css/' + stylesheet);
-
-		$('link#theme').load(function(){
-			$('link#main').attr('href', 'resources/css/' + stylesheet);
-		});
-	}
-
-	$('#themes li').click(function(e){
-		e.preventDefault();
-
-		var stylesheet = $(this).data("name")+'.css';
-
-		$('link#theme').attr('href', 'resources/css/' + stylesheet);
-
-		$('link#theme').load(function(){
-			$('link#main').attr('href', 'resources/css/' + stylesheet);
-		});
-
-		$.cookie('theme', stylesheet);
-	});
-</script>
 </body>
 </html>
