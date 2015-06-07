@@ -39,6 +39,17 @@ $(function(){
     $('#slide3').css("background-image", "url(resources/img/carousel/photo3.jpg)");
     //EOF setting up sliders images
 
+    //drawing skills charts
+    var el=document.getElementById('footer');
+    var cs=document.defaultView.getComputedStyle(el,null);
+    var bg=cs.getPropertyValue('background-color');
+
+    $('#skillNo1').html("").data("fgcolor", bg).data("iconcolor", bg).circliful();
+    $('#skillNo2').html("").data("fgcolor", bg).data("iconcolor", bg).circliful();
+    $('#skillNo3').html("").data("fgcolor", bg).data("iconcolor", bg).circliful();
+    $('#skillNo4').html("").data("fgcolor", bg).data("iconcolor", bg).circliful();
+    //EOF skills charts
+
     //isotope configuration
     var $container = $('#isotope').imagesLoaded( function() {
         $container.isotope({
