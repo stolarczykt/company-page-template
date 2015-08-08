@@ -43,6 +43,7 @@ module.exports = function(grunt) {
 				files: ['css-langs/less/*.less', 'css-langs/less/colors/*.less'],
 				tasks: ['less:compile']
 			},
+			//uncomment if you prefer sass than less
 			//sass: {
 			//	files: ['css-langs/sass/*.scss', 'css-langs/sass/colors/*.scss'],
 			//	tasks: ['sass:compile']
