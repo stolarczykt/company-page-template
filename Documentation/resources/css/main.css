@@ -1,0 +1,68 @@
+.docs-header {
+    background: #2aacf7;
+    color: #ffffff;
+}
+
+.lead li {
+    padding: 10px 0;
+}
+
+.logo-left {
+    color: #2aacf7;
+    background-color: #ffffff;
+    padding: 5px 2px 5px 5px;
+}
+
+.logo-right {
+    border: 1px solid #ffffff;
+    padding: 4px 5px 4px 2px;
+}
+
+.sub-section {
+    padding-left: 40px;
+}
+
+.nav {
+    background-color: #f7f5fa;
+}
+
+.affix > .nav > .active {
+    font-weight: bold;
+    border-left: 5px solid #2aacf7;
+    -moz-transition:all 0.3s ease-out;
+    -webkit-transition:all 0.3s ease-out;
+    -o-transition:all 0.3s ease-out;
+    transition:all 0.3s ease-out;
+}
+
+.nav .nav {
+    display: none;
+}
+
+.nav .active .nav {
+    display: block;
+}
+
+.nav .nav a {
+    font-weight: normal;
+    font-size: .85em;
+}
+
+.nav .nav .active a,
+.nav .nav .active:hover a,
+.nav .nav .active:focus a {
+    font-weight: bold;
+    padding-left: 20px;
+    margin-left: 2px;
+    border-left: 2px solid #2aacf7;
+    -moz-transition:all 0.3s ease-out;
+    -webkit-transition:all 0.3s ease-out;
+    -o-transition:all 0.3s ease-out;
+    transition:all 0.3s ease-out;
+}
+
+.nav .nav .active span,
+.nav .nav .active:hover span,
+.nav .nav .active:focus span {
+    display: none;
+}

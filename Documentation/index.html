@@ -1,0 +1,585 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head lang="en">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<title>BeeEater - Documentation</title>
+	<link rel="shortcut icon" href="resources/img/favicon.ico">
+	<link rel="stylesheet" href="resources/vendor/bootstrap/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="resources/vendor/bootstrap/css/bootstrap-theme.min.css"/>
+	<link rel="stylesheet" href="resources/vendor/syntaxhighlighter/css/shCoreDefault.css"/>
+	<link rel="stylesheet" href="resources/vendor/syntaxhighlighter/css/shThemeDefault.css"/>
+
+	<link rel="stylesheet" href="resources/css/main.css"/>
+
+</head>
+<body data-spy="scroll" data-target="#myScrollspy">
+
+	<div class="docs-header jumbotron">
+		<div class="container">
+			<h1><span class="logo-left">Bee</span><span class="logo-right">Eater</span></h1>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-9">
+				<section id="thanks">
+					<div class="page-header"><h1>Thank you!</h1></div>
+					<p class="lead">
+						Thanks for purchasing BeeEater template. Feel free to contact me if you have any questions or
+						problems, that are beyond the scope of this documentation. You can simply contact me via email:
+						<a href="mailto:bootstrap@pontait.com">bootstrap@pontait.com</a>
+					</p>
+				</section>
+				<section id="introduction">
+					<div class="page-header"><h1>Introduction</h1></div>
+					<p class="lead">
+						BeeEater is a fully responsive web template. It comes with <strong>8 predefined color themes</strong>
+						and <strong>bonus blog and post pages</strong>. Developer version uses <strong>LESS (or SASS)</strong>
+						so it is easy to modify and you are able to create as many color themes as you want.
+					</p>
+				</section>
+				<section id="features">
+					<div class="page-header"><h1>Features</h1></div>
+					<ul class="lead">
+						<li><strong>Fully responsive design</strong></li>
+						<li><strong>HTML5 and CSS3</strong></li>
+						<li><strong>Blog</strong> and <strong>post</strong> pages</li>
+						<li>Build with <strong>LESS</strong> and <strong>SASS</strong></li>
+						<li><strong>8 predefined color themes</strong> - you can build new one by changing few variables</li>
+						<li>Integrations with <strong>Font Awesome</strong> - Are you bored with circles? Replace them with squares or bells... Want more? - Draw custom skills charts.</li>
+						<li><strong>Skills charts</strong> - customizable by <strong>Font Awesome</strong> icons</li>
+						<li><strong><a href="http://isotope.metafizzy.co/" target="_blank">Isotope</a></strong> filterable portfolio</li>
+						<li>Bootstrap's <string>full screen Carousel</string></li>
+						<li><strong>Realtime</strong> form validation</li>
+						<li><strong>Developer version</strong> - Grunt tasks like watch, livereload, less or sass.</li>
+						<li>Documentation</li>
+					</ul>
+				</section>
+				<section id="installation">
+					<div class="page-header"><h1>Installation</h1></div>
+					<p class="lead">
+						This template consists of static HTML files, so you are able to view them via web browser on your
+						desktop. <br/>
+						If you have some knowledge about <a href="http://gruntjs.com/" target="_blank">Grunt</a>, you
+						can run server locally by calling:
+					</p>
+					<pre class="brush: bash">$ grunt server</pre>
+					<p class="lead">
+						Server by default will be listening on localhost:9000. More about developer version will be
+						covered in the <a href="#dev-version">next section</a>.
+					</p>
+					<p class="lead">
+						You can install template on your server by uploading content of <code>Template</code> directory
+						into your server's root directory. Then go to your domain to check if everything works.
+					</p>
+				</section>
+				<section id="dev-version">
+					<div class="page-header"><h1>Developer's version</h1></div>
+					<p class="lead">
+						If want to use developer's version, you will need to install NPM on your local machine.
+						NPM comes along with <a href="http://nodejs.org/" target="_blank">Node.js</a>.
+					</p>
+					<p class="lead">
+						To be more effective at working with developer's version you need to have some basic knowledge
+						about <a href="http://gruntjs.com/" target="_blank">Grunt</a>.
+					</p>
+					<p class="lead">
+						Developer's version was mainly created to give you opportunity to build infinity number of color
+						themes, by changing only a few variables.
+						Moreover beacause of <code>watch</code> task it's easy to have realtime experience during
+						development.
+					</p>
+					<p class="lead">
+						Developer's version is located under <code>Template-Dev</code> directory. Before you start to play
+						with it, you need to install all dependencies. It can be done by calling:
+					</p>
+					<pre class="brush: bash">$ npm install</pre>
+					<p class="lead">
+						After that you are ready to use Grunt and it's tasks which are defined in <code>Gruntfile.js</code>.
+					</p>
+					<section id="dv-grunt" class="sub-section">
+						<div class="page-header"><h2>Grunt tasks</h2></div>
+						<p class="lead">
+							Some of Grunt tasks which are available for you:
+						</p>
+						<ul class="lead">
+							<li>
+								<code>less:compile</code> - will compile all themes (LESS files) which are located under
+								<code>css-langs/less/colors/</code> directory, and will place them under
+								<code>resources/css/</code> directory, overriding the old ones.
+							</li>
+							<li>
+								<code>sass:compile</code> - will compile all themes (SASS files) which are located under
+								<code>css-langs/sass/colors/</code> directory, and will place them under
+								<code>resources/css/</code> directory, overriding the old ones.
+							</li>
+							<li>
+								<code>watch</code> - will watch changes on files and then trigger livereload.
+							</li>
+							<li>
+								<code>clean:dist</code> - will clean <code>dist</code> directory.
+							</li>
+							<li>
+								<code>copy:dist</code> - will copy template files to <code>dist</code> directory.
+							</li>
+							<li>
+								<code>connect:dev</code> - will start a local static web server on 9000 port. Moreover adds
+								livereload script to the response.
+							</li>
+							<li>
+								<code>server</code> - starts a local static web server on 9000 port and reloads content
+								each time files are changed.
+							</li>
+							<li>
+								<code>build</code> - builds template: compiles LESS or SASS files, cleans <code>dist</code>
+								directory and copies a new version of template to this directory.
+							</li>
+						</ul>
+					</section>
+					<section id="dv-new-template" class="sub-section">
+						<div class="page-header"><h2>Creating new color themes</h2></div>
+						<p class="lead">
+							Creating new color theme can be done by following these steps:
+						</p>
+						<ol class="lead">
+							<li>
+								Go to <code>css-langs/less/colors/</code> directory and create new LESS file
+								(e.g. new-theme.less) with identical content as other files in this directory.
+							</li>
+							<li>
+								Change color variables in newly created file.
+							</li>
+							<li>
+								Run <code>less:compile</code> task.
+							</li>
+							<li>
+								New theme file (new-theme.css) will be created in <code>resources/css/</code> directory.
+							</li>
+						</ol>
+					</section>
+				</section>
+				<section id="main-page">
+					<div class="page-header"><h1>Main page</h1></div>
+					<section id="mp-carousel" class="sub-section">
+						<div class="page-header"><h2>Carousel</h2></div>
+						<p class="lead">
+							If you want to add new slide to carousel, you have to do four things: <br/>
+						</p>
+						<ol class="lead">
+							<li>Add new item to slider box:
+								<pre class="brush:html">
+									<div class="carousel-inner" role="listbox">
+										...
+										<!-- previous slides here-->
+										...
+										<div class="item" id="slide4">
+											<div class="slide-content">
+												<div class="container">
+													<div class="row">
+														<div class="col-md-12 col-xs-12">
+															<!-- content -->
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</pre>
+							</li>
+							<li>Add new indicator to list:
+								<pre class="brush:html">
+									<ol class="carousel-indicators">
+										...
+										<!-- previous indicators here-->
+										...
+										<li data-target="#slider" data-slide-to="4"></li>
+									</ol>
+								</pre>
+							</li>
+							<li>Add new background image do <code>resources/img/carousel/</code> directory.</li>
+							<li>Set slide background in javascript. Go to <code>main.js</code> and add new line slider section.
+								Do not forget to use proper id.
+								<pre class="brush:javascript">
+									//setting up sliders images
+									...
+									...
+									$('#slide4').css("background-image", "url(resources/img/carousel/photo4.jpg)");
+									//EOF setting up sliders images
+								</pre>
+							</li>
+						</ol>
+					</section>
+					<section id="mp-services" class="sub-section">
+						<div class="page-header"><h2>Services</h2></div>
+						<p class="lead">
+							In services section it is important to add, that it uses "Stacked Icons" from Font Awesome.
+							This means that if you are bored with circles :), you can use other shapes from Font Awesome,
+							like squares or even bells. All you need to do is changing icon classes:
+						</p>
+						<img class="img-responsive" src="resources/img/services_fa.png" alt="Example service section"/>
+						<pre class="brush:html">
+							<div class="col-md-3 service">
+								<span class="fa-stack">
+									<i class="fa fa-circle fa-stack-2x"></i>
+									<i class="fa fa-laptop fa-stack-1x"></i>
+								</span>
+								<h4>Web Development</h4>
+								<p>
+									...
+								</p>
+							</div>
+							<div class="col-md-3 service">
+								<span class="fa-stack">
+									<i class="fa fa-square fa-stack-2x"></i>
+									<i class="fa fa-pencil fa-stack-1x"></i>
+								</span>
+								<h4>Web Design</h4>
+								<p>
+									...
+								</p>
+							</div>
+							<div class="col-md-3 service">
+								<span class="fa-stack">
+									<i class="fa fa-apple fa-stack-2x"></i>
+									<i class="fa fa-comment-o fa-stack-1x"></i>
+								</span>
+								<h4>Training</h4>
+								<p>
+									...
+								</p>
+							</div>
+							<div class="col-md-3 service">
+								<span class="fa-stack">
+									<i class="fa fa-bell fa-stack-2x"></i>
+									<i class="fa fa-bullhorn fa-stack-1x"></i>
+								</span>
+								<h4>Consulting</h4>
+								<p>
+									...
+								</p>
+							</div>
+						</pre>
+					</section>
+					<section id="mp-quotation" class="sub-section">
+						<div class="page-header"><h2>Quotation</h2></div>
+						<p class="lead">
+							Quotation background by default is located in <code>resources/img/quotation-bg.jpg</code>.
+						</p>
+					</section>
+					<section id="mp-skills" class="sub-section">
+						<div class="page-header"><h2>Skills charts</h2></div>
+						<p class="lead">
+							Drawing skills charts is done by great
+							<a href="https://github.com/pguso/jquery-plugin-circliful" target="_blank">jquery-plugin-circliful</a>.
+							<br/>
+							Big advantage of using this plugin is integration with <strong>Font Awesome icons</strong>.
+						</p>
+						<p class="lead">
+							Most important <code>data-*</code> attributes for you, are:
+						</p>
+						<ol class="lead">
+							<li>data-text - big text displayed inside of the circle</li>
+							<li>data-percent - chart's filling percentage</li>
+							<li>data-icon - <strong>Font Awesome</strong> icon which you want to use inside of the circle</li>
+							<li>data-info - smaller text displayed inside of the circle</li>
+						</ol>
+						<p class="lead">
+							Notice: you can change color themes on your website, so we decided to set color of the chart dynamically.
+							That means that we are setting this color by JavaScript (<code>main.js</code>) and by default it uses styles
+							from <code>footer</code> element. Because of that it is important to do not delete this element.
+						</p>
+						<p class="lead">If you want to add new chart you should:</p>
+						<ol class="lead">
+							<li>Create new chart box with new ID add all needed data:
+								<pre class="brush:html">
+									<div id="skillNo5"
+										 class="skill-chart"
+										 data-text="72%"
+										 data-percent="72"
+										 data-icon="fa-css3"
+										 data-info="CSS"
+										 data-width="30"
+										 data-fontsize="38"
+										 data-bgcolor="#eee"
+										 data-border="inline"
+										 data-iconsize="24"
+										 data-dimension="200">
+									</div>
+								</pre>
+							</li>
+							<li>Add ne line in <code>main.js</code> file for new created chart:
+								<pre class="brush:javascript">
+									//drawing skills charts
+									var el=document.getElementById('footer');
+									var cs=document.defaultView.getComputedStyle(el,null);
+									var bg=cs.getPropertyValue('background-color');
+
+									$('#skillNo1').html("").data("fgcolor", bg).data("iconcolor", bg).circliful();
+									...
+									...
+									$('#skillNo5').html("").data("fgcolor", bg).data("iconcolor", bg).circliful();
+									//EOF skills charts
+								</pre>
+							</li>
+						</ol>
+						<p class="lead">
+							For more detailed documentation you should go to
+							<a href="https://github.com/pguso/jquery-plugin-circliful" target="_blank">https://github.com/pguso/jquery-plugin-circliful</a>.
+						</p>
+					</section>
+					<section id="mp-portfolio" class="sub-section">
+						<div class="page-header"><h2>Portfolio</h2></div>
+						<p class="lead">
+							Portfolio uses <a href="http://isotope.metafizzy.co/" target="_blank">Isotope</a> to display,
+							filter and sort projects.
+						</p>
+						<p class="lead">
+							You can add new categories to portfolio section. Then you can add new projects to existing
+							categories.
+						</p>
+						<p class="lead">
+							Adding new category should by done by adding <code>input</code> field and it's label in
+							filter <code>div</code> element. The most important is to define new category class in
+							<code>data-filter</code> element:
+						</p>
+						<pre class="brush:html">
+							<div id="filters" class="button-group">
+								...
+								...
+
+								<input type="radio" id="works-new-category" name="filter" />
+								<label for="works-new-category" class="btn" data-filter=".new-category">new category</label>
+							</div>
+						</pre>
+						<p class="lead">
+							After that you should add new project to isotope container:
+						</p>
+						<pre class="brush:html">
+							<div id="isotope">
+								...
+								...
+								<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 new-category">
+									<div class="project-item">
+										<div class="project-over-layer" data-toggle="modal" data-target="#projectNo23Modal">
+											<div class="project-description">
+												<i class="fa fa-search-plus fa-3x"></i>
+												<h5>Project name</h5>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum semper gravida porta.</p>
+											</div>
+										</div>
+										<img class="img-responsive" src="resources/img/projects/image-1.jpg" alt=""/>
+									</div>
+
+									<div id="projectNo23Modal" class="modal fade" role="dialog" aria-labelledby="projectNo23ModalLabel" aria-hidden="true">
+										<div class="modal-dialog">
+											<div class="modal-content">
+												<div class="modal-header">
+													<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+													<h5 class="modal-title" id="projectNo23ModalLabel">Project name</h5>
+													<p>
+														Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tempus, nisl et molestie
+														pretium, felis lectus venenatis lorem, nec faucibus leo risus ut dui. Duis bibendum interdum
+														mauris, non interdum neque. Proin sodales ante ut lacinia cursus. <br/>
+														Proin ultrices ipsum vitae lectus hendrerit.
+													</p>
+												</div>
+												<div class="modal-body">
+													<img class="img-responsive" src="resources/img/projects/image-1.jpg" alt=""/>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								...
+								...
+							</div>
+						</pre>
+						<p class="lead">
+							Notice: remember to add category name (used in <code>data-filter</code>) as a class to project css classes.
+						</p>
+						<p class="lead">
+							Projects images by default are kept in <code>resources/img/projects/</code> directory
+						</p>
+					</section>
+					<section id="mp-contact-form" class="sub-section">
+						<div class="page-header"><h2>Contact form</h2></div>
+						<p class="lead">
+							Contact form validation uses bootstrap validator by Cina Saffary. For more information
+							please go to <a href="https://github.com/1000hz/bootstrap-validator">https://github.com/1000hz/bootstrap-validator</a>
+						</p>
+					</section>
+					<section id="mp-google-map" class="sub-section">
+						<div class="page-header"><h2>Google Maps</h2></div>
+						<p class="lead">
+							Using Google Maps is very simple. All you need to do is go to <code>main.js</code> and edit
+							coordinates in <code>LatLng()</code> function.
+						</p>
+						<pre class="brush:javascript">
+							function initGoogleMap() {
+								var var_location = new google.maps.LatLng(45.430817,12.331516); //change coordinates here
+
+								var var_mapoptions = {
+									scrollwheel: false,
+									center: var_location,
+									zoom: 14
+								};
+
+								var var_marker = new google.maps.Marker({
+									position: var_location,
+									map: var_map,
+									title:"Venice"}); //change marker's title
+
+								var var_map = new google.maps.Map(document.getElementById("map-container"),
+									var_mapoptions);
+
+								var_marker.setMap(var_map);
+							}
+						</pre>
+					</section>
+				</section>
+				<section id="blog-page">
+					<div class="page-header"><h1>Blog page</h1></div>
+					<p class="lead">
+						Blog page consists of posts previews and pagination row. Each post preview should consists of
+						image, short description, publication date, number of comments and tags.
+					</p>
+					<img class="img-responsive" src="resources/img/BeeEater-bw-blog.jpg" alt="Blog page"/>
+				</section>
+				<section id="post-page">
+					<div class="page-header"><h1>Post page</h1></div>
+					<p class="lead">
+						Post page has post's content and additional sections like social media section, comments section and newsletter section.
+					</p>
+					<img class="img-responsive" src="resources/img/BeeEater-bw-post.jpg" alt="Post page"/>
+				</section>
+				<section id="google-analytics">
+					<div class="page-header"><h1>Google Analytics</h1></div>
+					<p class="lead">
+						Google Analytics scripts is attached by default to each page and all you need to do is replacing
+						<code>XX-XXXXXXXX-X</code> string with your tracking code from GA.
+					</p>
+					<pre class="brush:html">
+						<script>
+							(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+								(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+									m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+							})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+							ga('create', 'XX-XXXXXXXX-X', 'auto');
+							ga('send', 'pageview');
+
+						</script>
+					</pre>
+				</section>
+				<section id="credits">
+					<div class="page-header"><h1>Credits</h1></div>
+					<ul class="lead">
+						<li><a href="http://getbootstrap.com/" target="_blank">Bootstrap</a></li>
+						<li><a href="https://jquery.com/" target="_blank">jQuery</a></li>
+						<li><a href="http://isotope.metafizzy.co" target="_blank">Isotope</a></li>
+						<li><a href="http://fontawesome.io" target="_blank">Fontawesome</a></li>
+						<li><a href="http://imagesloaded.desandro.com/" target="_blank">Imagesloaded</a></li>
+						<li><a href="https://github.com/pguso/jquery-plugin-circliful" target="_blank">Circliful</a></li>
+						<li><a href="http://gsgd.co.uk/sandbox/jquery/easing/" target="_blank">jQuery Easing</a></li>
+						<li><a href="https://github.com/1000hz/bootstrap-validator" target="_blank">Bootstrap Validator</a></li>
+						<li><a href="http://startbootstrap.com/template-overviews/scrolling-nav/" target="_blank">Scrolling Nav</a></li>
+						<li><a href="https://www.google.com/fonts" target="_blank">Google Fonts</a></li>
+						<li><a href="http://tympanus.net/Development/CreativeLinkEffects/" target="_blank">Link Effects</a></li>
+						<li><a href="https://ianlunn.github.io/Hover/" target="_blank">Hover.css</a></li>
+					</ul>
+					<p class="lead">
+						<strong>Images:</strong><br/>
+						<ul class="lead">
+							<li><a href="https://unsplash.com/" target="_blank">Unsplash</a></li>
+							<li><a href="http://www.flickr.com/photos/astragony/" target="_blank">Daniel Zedda</a></li>
+						</ul>
+					</p>
+				</section>
+			</div>
+			<div class="col-md-3" id="myScrollspy">
+				<nav class="affix" data-spy="affix">
+					<ul class="nav">
+						<li class="active">
+							<a href="#thanks">Thank you!</a>
+						</li>
+						<li>
+							<a href="#introduction">Introduction</a>
+						</li>
+						<li>
+							<a href="#features">Features</a>
+						</li>
+						<li>
+							<a href="#installation">Installation</a>
+						</li>
+						<li>
+							<a href="#dev-version">Developer's version</a>
+							<ul class="nav">
+								<li>
+									<a href="#dv-grunt">Grunt tasks</a>
+								</li>
+								<li>
+									<a href="#dv-new-template">Creating new color themes</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#main-page">Main page</a>
+							<ul class="nav">
+								<li>
+									<a href="#mp-carousel">Carousel</a>
+								</li>
+								<li>
+									<a href="#mp-services">Services</a>
+								</li>
+								<li>
+									<a href="#mp-quotation">Quotation</a>
+								</li>
+								<li>
+									<a href="#mp-skills">Skills charts</a>
+								</li>
+								<li>
+									<a href="#mp-portfolio">Portfolio</a>
+								</li>
+								<li>
+									<a href="#mp-contact-form">Contact form</a>
+								</li>
+								<li>
+									<a href="#mp-google-map">Google Maps</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#blog-page">Blog page</a>
+						</li>
+						<li>
+							<a href="#post-page">Post page</a>
+						</li>
+						<li>
+							<a href="#google-analytics">Google Analytics</a>
+						</li>
+						<li>
+							<a href="#credits">Credits</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+
+	<script src="resources/vendor/jquery/jquery-min.js"></script>
+	<script src="resources/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+	<script src="resources/vendor/syntaxhighlighter/js/shCore.js"></script>
+	<script src="resources/vendor/syntaxhighlighter/js/shBrushBash.js"></script>
+	<script src="resources/vendor/syntaxhighlighter/js/shBrushCss.js"></script>
+	<script src="resources/vendor/syntaxhighlighter/js/shBrushJScript.js"></script>
+	<script src="resources/vendor/syntaxhighlighter/js/shBrushSass.js"></script>
+	<script src="resources/vendor/syntaxhighlighter/js/shBrushXml.js"></script>
+
+	<script type="text/javascript">
+		SyntaxHighlighter.all()
+	</script>
+</body>
+</html>
