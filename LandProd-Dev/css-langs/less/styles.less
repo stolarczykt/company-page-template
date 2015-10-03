@@ -930,6 +930,50 @@ header h1 {
   overflow: hidden;
 }
 
+.plans-section {
+  background: @teamBackground;
+}
+
+.plans-section .plan {
+  background: #FFF;
+  border: 1px solid #c2c2c2;
+  padding: 20px;
+}
+
+.plans-section .plan h5 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.plans-section .plan h4 {
+  text-align: center;
+  padding: 20px 0;
+  margin: 10px -20px;
+  background: @teamBackground;
+}
+
+.plans-section .plan .fa-stack {
+  font-size: 12px;
+  line-height: 1.9em;
+  margin: 0 5px 0 0;
+}
+
+.plans-section .plan li {
+  margin: 10px 0;
+}
+
+.plans-section .plan li.inactive {
+  text-decoration: line-through;
+}
+
+.plans-section .plan li.inactive .fa-stack-2x {
+  color: @lightGrey;
+}
+
+.plans-section .plan .fa-stack-1x {
+  color: @secondColor;
+}
+
 @media (max-width: 767px) {
   .benefit h2 {
     text-align: left;
