@@ -599,17 +599,6 @@ footer i:hover {
   transition:all @transSpeedFast ease-out;
 }
 
-header {
-  background: @firstColor;
-  color: @secondColor;
-}
-
-header h1 {
-  text-align: center;
-  margin: 25px 0;
-}
-
-
 .blog-page {
   margin-top: 100px;
 }
@@ -655,7 +644,7 @@ header h1 {
 .newsletter input {
   width: 30%;
   margin: auto;
-  height: 50px;
+  height: 51px;
 }
 
 .newsletter form {
@@ -817,4 +806,90 @@ header h1 {
   -webkit-transition:all @transSpeedFast ease-out;
   -o-transition:all @transSpeedFast ease-out;
   transition:all @transSpeedFast ease-out;
+}
+
+
+header {
+  background: @firstColor;
+  color: @secondColor;
+}
+
+header h1 {
+  text-align: center;
+  margin: 25px 0;
+}
+
+.benefit {
+  vertical-align: middle;
+}
+
+.benefit .fa-stack {
+  font-size: 30px;
+  line-height: 1.9em;
+  margin: 0 10px 0 0;
+}
+
+.benefit h2 {
+  font-size: 20px;
+  margin: 0;
+  text-align: center;
+}
+
+.benefit .fa-stack-1x {
+  color: @secondColor;
+}
+
+.fa-rotate-45{
+  filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=0.5);
+  -webkit-transform:rotate(45deg);
+  -ms-transform:rotate(45deg);
+  transform:rotate(45deg);
+}
+
+@keyframes burst {
+  0% {opacity:.6}
+  50% {transform:scale(1.8);opacity:0}
+  100%{opacity:0}
+}
+.faa-burst.animated,
+.faa-burst.animated-hover:hover,
+.faa-parent.animated-hover:hover .faa-burst {
+  animation: burst 2s infinite linear
+}
+
+.coming-soon h5 {
+  text-transform: uppercase;
+  margin: 0;
+}
+
+#timer {
+  margin: 20px 0;
+  text-align: center;
+}
+
+#timer span {
+  font-size: 40px;
+  border-bottom: 1px solid #2aacf7;
+}
+
+.coming-soon p {
+  text-align: justify;
+  font-size: 18px;
+}
+
+.follow h2 {
+  text-align: center;
+  margin: 0 0 25px 0;
+}
+.follow h2 span {
+  color: @firstColor;
+}
+
+@media (max-width: 767px) {
+  .benefit h2 {
+    text-align: left;
+  }
+  .coming-soon h5 {
+    text-align: center;
+  }
 }
