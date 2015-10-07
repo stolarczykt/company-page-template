@@ -11,13 +11,14 @@
 	<link rel="stylesheet" href="resources/vendor/bootstrap/css/bootstrap-theme.min.css"/>
 	<link rel="stylesheet" href="resources/vendor/font-awesome/css/font-awesome.min.css"/>
 	<link rel="stylesheet" href="resources/vendor/font-awesome-animation/font-awesome-animation.min.css" />
-	<link rel="stylesheet" href="resources/css/blue-and-white.css"/>
+	<link id="theme" rel="stylesheet" href="resources/css/blue-and-white.css"/>
 
+	<link rel="stylesheet" href="resources/vendor/theme-widget/css/theme-widget.css" />
 </head>
 <body>
-	<header>
+	<header class="header">
 		<div class="container">
-			<h1>BeeEater</h1>
+			<h1>LOREM IPSUM</h1>
 		</div>
 	</header>
 
@@ -31,7 +32,7 @@
 							<i class="fa fa-circle fa-stack-2x faa-burst"></i>
 							<i class="fa fa-location-arrow fa-rotate-45 fa-stack-1x"></i>
 						</span>
-						Landing and product web site templates
+						Lorem ipsum Lorem ipsum
 					</h2>
 				</div>
 				<div class="col-md-4 col-xs-12 col-sm-4 benefit faa-parent animated-hover">
@@ -41,7 +42,7 @@
 							<i class="fa fa-circle fa-stack-2x faa-burst"></i>
 							<i class="fa fa-location-arrow fa-rotate-45 fa-stack-1x"></i>
 						</span>
-						Responsive design
+						Lorem ipsum Lorem ipsum
 					</h2>
 				</div>
 				<div class="col-md-4 col-xs-12 col-sm-4 benefit faa-parent animated-hover">
@@ -51,7 +52,7 @@
 							<i class="fa fa-circle fa-stack-2x faa-burst"></i>
 							<i class="fa fa-location-arrow fa-rotate-45 fa-stack-1x"></i>
 						</span>
-						Package includes PSD files
+						Lorem ipsum Lorem ipsum
 					</h2>
 				</div>
 			</div>
@@ -111,17 +112,83 @@
 			<div class="row newsletter">
 				<form action="https://gumroad.com/follow_from_embed_form" class="form-inline" method="post">
 					<input name="seller_id" type="hidden" value="8388012025603">
-					<input name="email" placeholder="Your email" type="email" required>
+					<input name="email" placeholder="Your email" type="email">
 					<button type="submit" class="btn btn-default">NOTIFY ME</button>
 				</form>
 			</div>
 		</div>
 	</section>
 
+
+	<!-- Themes widget -->
+	<div id="themes-menu">
+		<div class="themes-content">
+			<div  id="themes">
+				<div class="theme-item" data-name="blue-and-white">
+					<span class="fa-stack">
+						<i class="fa fa-square fa-stack-2x" style="color: #2AACF7"></i>
+						<i class="fa fa-paint-brush fa-stack-1x" style="color: #ffffff"></i>
+					</span>
+				</div>
+				<div class="theme-item" data-name="yellow-and-black">
+					<span class="fa-stack">
+						<i class="fa fa-square fa-stack-2x" style="color: #FFC600"></i>
+						<i class="fa fa-paint-brush fa-stack-1x" style="color: #000000"></i>
+					</span></div>
+				<div class="theme-item" data-name="aqua-and-dark-blue">
+					<span class="fa-stack">
+						<i class="fa fa-square fa-stack-2x" style="color: #494D60"></i>
+						<i class="fa fa-paint-brush fa-stack-1x" style="color: #C4E6E2"></i>
+					</span>
+				</div>
+				<div class="theme-item" data-name="green-and-dark-blue">
+					<span class="fa-stack">
+						<i class="fa fa-square fa-stack-2x" style="color: #494D60"></i>
+						<i class="fa fa-paint-brush fa-stack-1x" style="color: #7DC24F"></i>
+					</span>
+				</div>
+				<div class="theme-item" data-name="aqua-and-black">
+					<span class="fa-stack">
+						<i class="fa fa-square fa-stack-2x" style="color: #43B6B1"></i>
+						<i class="fa fa-paint-brush fa-stack-1x" style="color: #000000"></i>
+					</span>
+				</div>
+				<div class="theme-item" data-name="pink-and-grey">
+					<span class="fa-stack">
+						<i class="fa fa-square fa-stack-2x" style="color: #EA5DA1"></i>
+						<i class="fa fa-paint-brush fa-stack-1x" style="color: #dfeafc"></i>
+					</span>
+				</div>
+				<div class="theme-item" data-name="brown-and-beige">
+					<span class="fa-stack">
+						<i class="fa fa-square fa-stack-2x" style="color: #b45956"></i>
+						<i class="fa fa-paint-brush fa-stack-1x" style="color: #f6e7ca"></i>
+					</span>
+				</div>
+				<div class="theme-item" data-name="grey-and-cobalt">
+					<span class="fa-stack">
+						<i class="fa fa-square fa-stack-2x" style="color: #0047ad"></i>
+						<i class="fa fa-paint-brush fa-stack-1x" style="color: #dfeafc"></i>
+					</span>
+				</div>
+			</div>
+			<div class="open-button" onclick="openThemesWidget()">
+				<span class="fa-stack">
+					<i class="fa fa-circle fa-stack-2x"></i>
+					<i class="fa fa-cogs fa-stack-1x"></i>
+				</span>
+			</div>
+		</div>
+	</div>
+	<!--EOF Themes widget -->
+
 	<script src="resources/vendor/jquery/jquery-min.js"></script>
 	<script src="resources/vendor/moment/moment.min.js"></script>
 	<script src="resources/vendor/moment/moment-timezone.min.js"></script>
 	<script src="resources/vendor/jquery.countdown/jquery.countdown.min.js"></script>
+
+	<script src="resources/vendor/theme-widget/js/jquery-cookie-pluigin.js"></script>
+	<script src="resources/vendor/theme-widget/js/theme-widget.js"></script>
 	<script>
 
 		var launchDay = moment.tz("2015-10-08 18:00", "Europe/Warsaw");
@@ -139,7 +206,7 @@
 				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-		ga('create', 'XX-XXXXXXXX-X', 'auto');
+		ga('create', 'UA-68443305-1', 'auto');
 		ga('send', 'pageview');
 
 	</script>
